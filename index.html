@@ -104,6 +104,100 @@
        Residential and Commercial Structural Design <br>
       SURVEYING WORKS<br>
         Boundary Surveing || Contour Surveying and Volume Calculation || Road Surveying || Surface Area Calculation Surveying || Building Structural marking || Deflection Observation for Load Test || Demarcation of Land || Land Partition <br>
+    </p>
+    <!-- Slideshow Sections -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 2em; margin: 2em 0; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background: #222; padding: 2em 0; color: #fff;">
+      <div style="flex: 1 1 300px; max-width: 500px;">
+        <h3 style="text-align:center;">Photos ABMC</h3>
+        <div class="slideshow" id="slideshow-abmc" style="position:relative; height:300px; overflow:hidden; background: transparent;"></div>
+      </div>
+      <div style="flex: 1 1 300px; max-width: 500px;">
+        <h3 style="text-align:center;">Photos ABMS</h3>
+        <div class="slideshow" id="slideshow-abms" style="position:relative; height:300px; overflow:hidden; background: transparent;"></div>
+      </div>
+    </div>
+    <script>
+      // List of images for each folder
+      const abmcImages = [
+        'Photos ABMC/Picsart_25-05-23_11-34-46-396.jpg',
+        'Photos ABMC/Picsart_25-05-23_11-38-44-216.jpg'
+      ];
+      const abmsImages = [
+        'photos ABMS/Picsart_24-03-14_17-24-02-779.jpg',
+        'photos ABMS/Picsart_25-04-14_07-20-14-284.jpg',
+        'photos ABMS/Picsart_25-04-14_07-31-16-425.jpg',
+        'photos ABMS/Picsart_25-04-14_10-31-09-238.jpg',
+        'photos ABMS/Picsart_25-04-25_08-19-38-425.jpg',
+        'photos ABMS/Picsart_25-04-25_08-24-55-084.jpg',
+        'photos ABMS/Picsart_25-04-25_08-30-13-174.jpg',
+        'photos ABMS/Picsart_25-04-25_08-40-46-481.jpg',
+        'photos ABMS/Picsart_25-04-25_08-48-56-057.jpg',
+        'photos ABMS/Picsart_25-05-01_07-08-54-516.jpg',
+        'photos ABMS/Picsart_25-05-02_09-17-09-256.jpg',
+        'photos ABMS/Picsart_25-05-05_14-51-50-010.jpg',
+        'photos ABMS/Picsart_25-05-06_20-26-51-168.jpg',
+        'photos ABMS/Picsart_25-05-07_13-19-40-408.jpg',
+        'photos ABMS/Picsart_25-05-07_13-24-01-550.jpg',
+        'photos ABMS/Picsart_25-07-12_17-47-39-541.jpg',
+        'photos ABMS/Picsart_25-07-12_17-51-39-401.jpg'
+      ];
+      // Alternate slideshow logic
+      function createSlideshow(images, containerId) {
+        const container = document.getElementById(containerId);
+        if (!container || images.length === 0) return { next: () => {} };
+        let idx = 0;
+        const img1 = document.createElement('img');
+        const img2 = document.createElement('img');
+        img1.src = images[0];
+        img2.src = images[0];
+        [img1, img2].forEach(img => {
+          img.style.width = '100%';
+          img.style.height = '100%';
+          img.style.objectFit = 'contain';
+          img.style.border = 'none';
+          img.style.background = 'transparent';
+          img.style.position = 'absolute';
+          img.style.top = '0';
+          img.style.left = '0';
+          img.style.transition = 'transform 3s cubic-bezier(.68,-0.55,.27,1.55), opacity 3s cubic-bezier(.68,-0.55,.27,1.55)';
+        });
+        container.style.position = 'relative';
+        container.appendChild(img1);
+        container.appendChild(img2);
+        img2.style.opacity = '0';
+        img2.style.transform = 'translateX(100%)';
+        let showingFirst = true;
+        function nextPhoto() {
+          idx = (idx + 1) % images.length;
+          if (showingFirst) {
+            img2.src = images[idx];
+            img2.style.opacity = '1';
+            img2.style.transform = 'translateX(0)';
+            img1.style.opacity = '0';
+            img1.style.transform = 'translateX(-100%)';
+          } else {
+            img1.src = images[idx];
+            img1.style.opacity = '1';
+            img1.style.transform = 'translateX(0)';
+            img2.style.opacity = '0';
+            img2.style.transform = 'translateX(-100%)';
+          }
+          showingFirst = !showingFirst;
+        }
+        return { next: nextPhoto };
+      }
+      const abmcSlideshow = createSlideshow(abmcImages, 'slideshow-abmc');
+      const abmsSlideshow = createSlideshow(abmsImages, 'slideshow-abms');
+      let toggle = true;
+      setInterval(() => {
+        if (toggle) {
+          abmcSlideshow.next();
+        } else {
+          abmsSlideshow.next();
+        }
+        toggle = !toggle;
+      }, 4000);
+    </script>
   </div>
   <div class="about">
     <h3 style="margin-bottom: 0.3em;">About Us</h3>
