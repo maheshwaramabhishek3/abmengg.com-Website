@@ -38,25 +38,48 @@
     .tagline {
       color: #dad3d3;
       background-color: #000000;
-      font-size: 0.8em;
-      margin: 0.5em;
+      font-size: 1.1em;
+      margin: 0.5em 0;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      height: 1.7em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tagline-text {
+      display: inline-block;
+      animation: scroll-tagline-bounce 15s linear infinite;
+    }
+    @keyframes scroll-tagline-bounce {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(40vw); }
+      50% { transform: translateX(0); }
+      75% { transform: translateX(-40vw); }
+      100% { transform: translateX(0); }
     }
     .about {
-      max-width: 600px;
-      margin: 2em auto;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
       background: #000000;
-      padding: 2em;
-      border-radius: 8px;
+      padding: 2em 0;
+      border-radius: 0;
       box-shadow: 0 2px 8px rgba(0,0,0,0.07);
       color: #948787;
     }
-        .Details {
+    .Details {
       max-width: 600px;
       margin: 2em auto;
       padding: 2em;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.07);
       color: #ffffff;
+      background: transparent;
     }
   </style>
 </head>
@@ -68,7 +91,7 @@
       <h2 style="margin: 0; line-height: 1.0; font-size: 1.5em; color: #ffffff;">ENGINEERING GROUP</h2>
     </div>
   </div>
-  <div class="tagline">Building the Future, Restoring the Past</div>
+  <div class="tagline"><span class="tagline-text">|| Building the Future, Restoring the Past ||</span></div>
   <div class="Details">
           <h3 style="margin-bottom: 0.3em;">DETAILS</h3>
     <p style="margin-top: 0.1em; margin-bottom: 1.2em;">
@@ -85,7 +108,7 @@
   <div class="about">
     <h3 style="margin-bottom: 0.3em;">About Us</h3>
     <p style="margin-top: 0.1em; margin-bottom: 1.2em;">
-      ABM Engineering Group is a leading construction company specializing in residential, commercial, and industrial projects. 
+      ABM Engineering Group is a leading construction company<br> specializing in residential, commercial, and industrial projects.<br> 
       We deliver quality, safety, and innovation in every build.
     </p>
     <h3 style="margin-bottom: 0.3em;">Contact</h3>
