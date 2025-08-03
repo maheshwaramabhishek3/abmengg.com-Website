@@ -1,0 +1,141 @@
+/* Common styles for ABM Engineering Group website */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: url('Images/Background/Background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 3.0em;
+  margin-bottom: 0.2em;
+}
+
+.tagline {
+  color: #dad3d3;
+  background-color: #000000;
+  font-size: 1.1em;
+  margin: 0.1em 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 1.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tagline-text {
+  display: inline-block;
+  animation: scroll-tagline-bounce 15s linear infinite;
+}
+
+@keyframes scroll-tagline-bounce {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(40vw); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(-40vw); }
+  100% { transform: translateX(0); }
+}
+
+.about {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  background: #000000;
+  padding: 2em 0;
+  border-radius: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  color: #948787;
+}
+
+/* Common section styles */
+.section {
+  background: rgba(34,34,34,0.7);
+  margin: 2em auto;
+  padding: 2em;
+  border-radius: 12px;
+  max-width: 1200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Common heading styles */
+h2 {
+  color: #25D366;
+  text-align: center;
+  margin-bottom: 1em;
+}
+h3 {
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+/* Common image grid styles */
+.images-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.images-grid img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  background: #222;
+}
+
+/* Common slideshow container styles */
+.slideshow {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* Common details section style */
+.Details {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  color: #ffffff;
+  background: transparent;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .images-grid img {
+    width: 100px;
+    height: 80px;
+  }
+  .section {
+    padding: 1em;
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABM Engineering Group - Gallery</title>
+  <link rel="icon" type="image/png" href="Images/graphical logo.png" />
+  <script src="images-data.js"></script>
+  <script src="common-header-footer.js"></script>
+  <link rel="stylesheet" href="common-styles.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <div id="gallery-sections"></div>
+  <div id="footer-placeholder"></div>
+  <script src="common-header-footer.js"></script>
+  <script>
+    // Inject header and footer into placeholders, then render gallery
+    window.addEventListener('DOMContentLoaded', function() {
+      if (typeof injectHeaderFooter === 'function') {
+        injectHeaderFooter('header-placeholder', 'footer-placeholder');
+      }
+      function renderGallerySection(title, images, altPrefix) {
+        const section = document.createElement('div');
+        section.className = 'section';
+        const h2 = document.createElement('h2');
+        h2.textContent = title;
+        section.appendChild(h2);
+        const grid = document.createElement('div');
+        grid.className = 'images-grid';
+        images.forEach((src, i) => {
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = `${altPrefix} ${i + 1}`;
+          grid.appendChild(img);
+        });
+        section.appendChild(grid);
+        return section;
+      }
+      const gallerySections = document.getElementById('gallery-sections');
+      gallerySections.innerHTML = '';
+      gallerySections.appendChild(renderGallerySection('Photos ABMC', abmcImages, 'ABMC'));
+      gallerySections.appendChild(renderGallerySection('Photos ABMS', abmsImages, 'ABMS'));
+      gallerySections.appendChild(renderGallerySection('3D Elevation Designing', elevationImages, '3D Elevation'));
+      gallerySections.appendChild(renderGallerySection('Structural Designing', structuralImages, 'Structural'));
+    });
+  </script>
+</body>
+</html>

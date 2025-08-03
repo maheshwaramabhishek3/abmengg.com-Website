@@ -1,0 +1,95 @@
+// Common image arrays for ABM Engineering Group
+// Use in both index.html and gallery.html
+
+const abmcImages = [
+  'Photos ABMC/Picsart_25-05-23_11-38-44-216.jpg',
+  'Photos ABMC/Picsart_25-05-23_11-34-46-396.jpg',
+  'Photos ABMC/IMG-20220117-WdA0025.jpg',
+  'Photos ABMC/IMG-20220117-WA0045.jpg',
+  'Photos ABMC/IMG-20220117-WA0044.jpg',
+  'Photos ABMC/IMG-20220117-WA0043.jpg',
+  'Photos ABMC/IMG-20220117-WA0041.jpg',
+  'Photos ABMC/IMG-20220117-WA0040.jpg',
+  'Photos ABMC/IMG-20220117-WA0039.jpg',
+  'Photos ABMC/IMG-20220117-WA0038.jpg',
+  'Photos ABMC/IMG-20220117-WA0037.jpg',
+  'Photos ABMC/IMG-20220117-WA0036.jpg',
+  'Photos ABMC/IMG-20220117-WA0035.jpg',
+  'Photos ABMC/IMG-20220117-WA0032.jpg',
+  'Photos ABMC/IMG-20220117-WA0031.jpg',
+  'Photos ABMC/IMG-20220117-WA0030.jpg',
+  'Photos ABMC/IMG-20220117-WA0025.jpg',
+  'Photos ABMC/IMG-20220117-WA0024.jpg',
+  'Photos ABMC/IMG-20220117-WA0022.jpg',
+  'Photos ABMC/Image 04.png'
+];
+
+const abmsImages = [
+  'photos ABMS/Picsart_25-05-02_09-17-09-256.jpg',
+  'photos ABMS/Picsart_25-05-01_07-08-54-516.jpg',
+  'photos ABMS/Picsart_25-05-05_14-51-50-010.jpg',
+  'photos ABMS/Picsart_25-04-25_08-48-56-057.jpg',
+  'photos ABMS/Picsart_25-04-25_08-40-46-481.jpg',
+  'photos ABMS/Picsart_25-05-06_20-26-51-168.jpg',
+  'photos ABMS/Picsart_25-04-25_08-30-13-174.jpg',
+  'photos ABMS/Picsart_25-05-07_13-19-40-408.jpg',
+  'photos ABMS/Picsart_25-04-25_08-24-55-084.jpg',
+  'photos ABMS/Picsart_25-05-24_14-44-50-464.jpg',
+  'photos ABMS/Picsart_25-05-24_14-42-11-215.jpg',
+  'photos ABMS/Picsart_25-05-24_14-38-58-058.jpg',
+  'photos ABMS/Picsart_25-05-07_13-24-01-550.jpg',
+  'photos ABMS/Picsart_25-04-25_08-19-38-425.jpg',
+  'photos ABMS/Picsart_25-04-14_10-31-09-238.jpg',
+  'photos ABMS/Picsart_25-06-11_07-52-32-838.jpg',
+  'photos ABMS/Picsart_25-06-11_07-40-41-003.jpg',
+  'photos ABMS/Picsart_25-06-11_07-36-52-826.jpg',
+  'photos ABMS/Picsart_25-05-25_14-10-10-678.jpg',
+  'photos ABMS/Picsart_25-04-14_07-31-16-425.jpg'
+];
+
+const elevationImages = [
+  '3D Elevation Designing/1.jpg',
+  '3D Elevation Designing/17.4 (3).jpg',
+  '3D Elevation Designing/3.jpg',
+  '3D Elevation Designing/2.jpg',
+  '3D Elevation Designing/17.4 (5).jpg',
+  '3D Elevation Designing/17.4 (4).jpg',
+  '3D Elevation Designing/17.4 (2).jpg',
+  '3D Elevation Designing/4.jpg',
+  '3D Elevation Designing/17.4 (1).jpg',
+  '3D Elevation Designing/13 (4).jpg',
+  '3D Elevation Designing/13 (3).jpg',
+  '3D Elevation Designing/Image 01.jpg',
+  '3D Elevation Designing/13 (2).jpg',
+  '3D Elevation Designing/13 (1).jpg',
+  '3D Elevation Designing/11 (3).jpg',
+  '3D Elevation Designing/11 (2).jpg',
+  '3D Elevation Designing/11 (1).jpg',
+  '3D Elevation Designing/Image 02.jpg',
+  '3D Elevation Designing/Image 03.jpg',
+  '3D Elevation Designing/Image 04.jpg',
+  '3D Elevation Designing/IMG_20220618_082001.jpg',
+  '3D Elevation Designing/IMG_20220618_082406.jpg',
+  '3D Elevation Designing/IMG_20220618_082506.jpg',
+  '3D Elevation Designing/IMG_20220618_083403.jpg',
+  '3D Elevation Designing/IMG_20220730_104415.png',
+  '3D Elevation Designing/IMG_20220730_104620.png',
+  '3D Elevation Designing/IMG_20220730_104749.png',
+  '3D Elevation Designing/IMG_20220730_104912.png'
+];
+
+const structuralImages = [
+  'Structural Designing/IMG_20220120_115022_018.jpg',
+  'Structural Designing/IMG_20220117_123506_987.jpg',
+  'Structural Designing/IMG_20220117_123232_091.jpg',
+  'Structural Designing/IMG-20220117-WA0055.jpg',
+  'Structural Designing/IMG-20220117-WA0054.jpg',
+  'Structural Designing/IMG-20220117-WA0053.jpg',
+  'Structural Designing/IMG-20220117-WA0052.jpg',
+  'Structural Designing/IMG-20220117-WA0051.jpg',
+  'Structural Designing/IMG-20220117-WA0050.jpg',
+  'Structural Designing/IMG-20220117-WA0049.jpg',
+  'Structural Designing/IMG-20220117-WA0048.jpg',
+  'Structural Designing/IMG-20220117-WA0047.jpg',
+  'Structural Designing/IMG-20220117-WA0046.jpg'
+];

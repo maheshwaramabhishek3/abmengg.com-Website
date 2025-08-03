@@ -5,93 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ABM ENGINEERING GROUP</title>
   <link rel="icon" type="image/png" href="Images/graphical logo.png" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 10%;
-      background: url('Images/Background/Background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      position: relative;
-      min-height: 100vh;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0,0,0,0.7);
-      pointer-events: none;
-      z-index: 0;
-    }
-    body > * {
-      position: relative;
-      z-index: 1;
-    }
-    h1 {
-      color: #ffffff;
-      font-size: 3.0em;
-      margin-bottom: 0.2em;
-    }
-    .tagline {
-      color: #dad3d3;
-      background-color: #000000;
-      font-size: 1.1em;
-      margin: 0.5em 0;
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      margin-right: calc(-50vw + 50%);
-      overflow: hidden;
-      white-space: nowrap;
-      position: relative;
-      height: 1.7em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .tagline-text {
-      display: inline-block;
-      animation: scroll-tagline-bounce 15s linear infinite;
-    }
-    @keyframes scroll-tagline-bounce {
-      0% { transform: translateX(0); }
-      25% { transform: translateX(40vw); }
-      50% { transform: translateX(0); }
-      75% { transform: translateX(-40vw); }
-      100% { transform: translateX(0); }
-    }
-    .about {
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      margin-right: calc(-50vw + 50%);
-      background: #000000;
-      padding: 2em 0;
-      border-radius: 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      color: #948787;
-    }
-    .Details {
-      max-width: 600px;
-      margin: 2em auto;
-      padding: 2em;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      color: #ffffff;
-      background: transparent;
-    }
-  </style>
+  <script src="images-data.js"></script>
+  <script src="common-header-footer.js"></script>
+  <link rel="stylesheet" href="common-styles.css">
 </head>
 <body>
-  <div style="display: flex; align-items: center; justify-content: center; gap: 1em; margin-bottom: 0.2em;">
-    <img src="Images/graphical logo.png" alt="ABM Logo" style="height: 80px; width: auto; border-radius: 8px;  box-shadow: 0 2px 8px rgba(0,0,0,0.07);" />
-    <div style="display: flex; flex-direction: column; justify-content: center;">
-      <h1 style="margin: 0; line-height: 1.0;">ABM</h1>
-      <h2 style="margin: 0; line-height: 1.0; font-size: 1.5em; color: #ffffff;">ENGINEERING GROUP</h2>
-    </div>
-  </div>
-  <div class="tagline"><span class="tagline-text">|| Building the Future, Restoring the Past ||</span></div>
+  <div id="header-placeholder"></div>
   <div class="Details">
           <h3 style="margin-bottom: 0.3em;">DETAILS</h3>
     <p style="margin-top: 0.1em; margin-bottom: 1.2em;">
@@ -106,7 +25,7 @@
         Boundary Surveing || Contour Surveying and Volume Calculation || Road Surveying || Surface Area Calculation Surveying || Building Structural marking || Deflection Observation for Load Test || Demarcation of Land || Land Partition <br>
     </p>
     <!-- Slideshow Sections -->
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 2em; margin: 2em 0; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background: rgba(34,34,34,0.6); padding: 2em 0; color: #fff;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 2em; margin: 2em 0; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background: rgba(34,34,34,0.5); padding: 2em 0; color: #fff;">
       <div style="flex: 1 1 300px; max-width: 500px;">
         <h3 style="text-align:center;">Photos ABMC</h3>
         <div class="slideshow" id="slideshow-abmc" style="position:relative; height:300px; overflow:hidden; background: transparent;"></div>
@@ -115,34 +34,23 @@
         <h3 style="text-align:center;">Photos ABMS</h3>
         <div class="slideshow" id="slideshow-abms" style="position:relative; height:300px; overflow:hidden; background: transparent;"></div>
       </div>
+      <div style="flex: 1 1 300px; max-width: 500px;">
+        <h3 style="text-align:center;">3D Elevation Designing</h3>
+        <div class="slideshow" id="slideshow-3d" style="position:relative; height:300px; overflow:hidden; background: transparent;"></div>
+      </div>
+      <div style="flex: 1 1 300px; max-width: 500px;">
+        <h3 style="text-align:center;">Structural Designing</h3>
+        <div class="slideshow" id="slideshow-structural" style="position:relative; height:300px; overflow:hidden; background: transparent;"></div>
+      </div>
     </div>
     <script>
-      // List of images for each folder
-      const abmcImages = [
-        'Photos ABMC/Picsart_25-05-23_11-34-46-396.jpg',
-        'Photos ABMC/Picsart_25-05-23_11-38-44-216.jpg'
-      ];
-      const abmsImages = [
-        'photos ABMS/Picsart_24-03-14_17-24-02-779.jpg',
-        'photos ABMS/Picsart_25-04-14_07-20-14-284.jpg',
-        'photos ABMS/Picsart_25-04-14_07-31-16-425.jpg',
-        'photos ABMS/Picsart_25-04-14_10-31-09-238.jpg',
-        'photos ABMS/Picsart_25-04-25_08-19-38-425.jpg',
-        'photos ABMS/Picsart_25-04-25_08-24-55-084.jpg',
-        'photos ABMS/Picsart_25-04-25_08-30-13-174.jpg',
-        'photos ABMS/Picsart_25-04-25_08-40-46-481.jpg',
-        'photos ABMS/Picsart_25-04-25_08-48-56-057.jpg',
-        'photos ABMS/Picsart_25-05-01_07-08-54-516.jpg',
-        'photos ABMS/Picsart_25-05-02_09-17-09-256.jpg',
-        'photos ABMS/Picsart_25-05-05_14-51-50-010.jpg',
-        'photos ABMS/Picsart_25-05-06_20-26-51-168.jpg',
-        'photos ABMS/Picsart_25-05-07_13-19-40-408.jpg',
-        'photos ABMS/Picsart_25-05-07_13-24-01-550.jpg',
-        'photos ABMS/Picsart_25-07-12_17-47-39-541.jpg',
-        'photos ABMS/Picsart_25-07-12_17-51-39-401.jpg'
-      ];
+      // Use shared image arrays from images-data.js
       // Alternate slideshow logic
-      function createSlideshow(images, containerId) {
+      window.addEventListener('DOMContentLoaded', function() {
+        if (typeof injectHeaderFooter === 'function') {
+          injectHeaderFooter('header-placeholder', 'footer-placeholder');
+        }
+        function createSlideshow(images, containerId) {
         const container = document.getElementById(containerId);
         if (!container || images.length === 0) return { next: () => {} };
         let idx = 0;
@@ -188,31 +96,17 @@
       }
       const abmcSlideshow = createSlideshow(abmcImages, 'slideshow-abmc');
       const abmsSlideshow = createSlideshow(abmsImages, 'slideshow-abms');
-      let toggle = true;
+      const elevationSlideshow = createSlideshow(elevationImages, 'slideshow-3d');
+      const structuralSlideshow = createSlideshow(structuralImages, 'slideshow-structural');
+      let slideshowIndex = 0;
+      const slideshows = [abmcSlideshow, abmsSlideshow, elevationSlideshow, structuralSlideshow];
       setInterval(() => {
-        if (toggle) {
-          abmcSlideshow.next();
-        } else {
-          abmsSlideshow.next();
-        }
-        toggle = !toggle;
+        slideshows[slideshowIndex].next();
+        slideshowIndex = (slideshowIndex + 1) % slideshows.length;
       }, 4000);
+      });
     </script>
   </div>
-  <div class="about">
-    <h3 style="margin-bottom: 0.3em;">About Us</h3>
-    <p style="margin-top: 0.1em; margin-bottom: 1.2em;">
-      ABM Engineering Group is a leading construction company<br> specializing in residential, commercial, and industrial projects.<br> 
-      We deliver quality, safety, and innovation in every build.
-    </p>
-    <h3 style="margin-bottom: 0.3em;">Contact</h3>
-    <p style="margin-top: 0.1em;">
-      ABM Engineering Group<br>
-      Reg. No.: UDYAM-TS-09-0106608<br>
-      Email: vishwakarmaabmgroups@gmail.com<br>
-      Phone: +91 8074395382, +91 8121333023<br>
-      <a href="https://wa.me/c/918074395383" target="_blank" style="color: #25D366; text-decoration: underline; font-weight: bold;">View Catalogue</a>
-    </p>
-  </div>
+  <div id="footer-placeholder"></div>
 </body>
 </html>
