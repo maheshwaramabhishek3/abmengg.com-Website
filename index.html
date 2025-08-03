@@ -9,7 +9,25 @@
       font-family: Arial, sans-serif;
       text-align: center;
       margin-top: 10%;
-      background-color: #f2f2f2;
+      background: url('Images/Background/IMG_20231124_163207.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      min-height: 100vh;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.5);
+      pointer-events: none;
+      z-index: 0;
+    }
+    body > * {
+      position: relative;
+      z-index: 1;
     }
     h1 {
       color: #2c3e50;
