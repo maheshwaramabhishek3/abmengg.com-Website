@@ -5,7 +5,7 @@ function injectHeaderFooter(headerId, footerId) {
     <div>
       <header style="width:100vw; margin-left:calc(-50vw + 50%); margin-right:calc(-50vw + 50%); background:transparent; padding:1.5em 0 0 0; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
         <div style="display: flex; align-items: center; justify-content: center; gap: 1em;">
-          <img src="Images/graphical logo.png" alt="ABM Logo" style="height: 80px; width: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);" />
+          <img src="Images/vabm.png" alt="ABM Logo" style="height: 80px; width: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);" />
           <div style="display: flex; flex-direction: column; justify-content: center;">
             <h1 style="margin: 0; line-height: 1.0; color: #ffffff; font-size: 2.5em;">ABM</h1>
             <h2 style="margin: 0; line-height: 1.0; font-size: 1.5em; color: #ffffff;">ENGINEERING GROUP</h2>
