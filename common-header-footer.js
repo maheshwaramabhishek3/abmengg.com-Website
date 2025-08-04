@@ -5,11 +5,11 @@ function injectHeaderFooter(headerId, footerId) {
     <div>
       <header style="width:100vw; margin-left:calc(-50vw + 50%); margin-right:calc(-50vw + 50%); background:transparent; padding:1.5em 0 0 0; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
         <div style="display: flex; align-items: center; justify-content: center; gap: 1em;">
-          <img src="Images/vabm.png" alt="ABM Logo" style="height: 250px; width: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);" />
+          <img src="Images/ABMENGG LOGO 092025.jpg" alt="ABM Logo" style="height: 150px; width: 300px; object-fit: cover; object-position: center; clip-path: inset(2% 0); border-radius: 28px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);" />
           <div style="display: flex; flex-direction: column; justify-content: center;">
             <h1 style="margin: 0; line-height: 1.0; color: #ffffff; font-size: 3.5em;">ABM</h1>
             <h2 style="margin: 0; line-height: 1.0; font-size: 1.5em; color: #ffffff;">ENGINEERING GROUP</h2>
-            <p style="margin: 0.2em 0 0 0; line-height: 1.0; font-size: 0.7em; color: #5984a8ff; opacity: 0.9;">Since 2021</p>
+            <p style="margin: 0.2em 0 0 0; line-height: 1.0; font-size: 1.0em; color: #6b9ac0ff; opacity: 0.9; font-family: 'Times New Roman', Times, serif; font-weight: bold;">Since 2021</p>
           </div>
         </div>
         <div class="tagline" style="margin-top:0.5em;"><span class="tagline-text">|| Building the Future, Restoring the Past ||</span></div>
@@ -18,6 +18,9 @@ function injectHeaderFooter(headerId, footerId) {
         <div style="display: flex; justify-content: left; gap: 1em;">
           <a href="index.html" id="nav-home" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Home</a>
           <a href="gallery.html" id="nav-gallery" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Gallery</a>
+          <a href="projects.html" id="nav-projects" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Project Works</a>
+          <a href="milestone.html" id="nav-milestone" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Milestone</a>
+          <a href="contact.html" id="nav-contact" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Contact Us</a>
         </div>
       </nav>
     </div>

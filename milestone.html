@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Milestones - ABM ENGINEERING GROUP</title>
+  <link rel="icon" type="image/jpeg" href="Images/ABMENGG LOGO 092025.jpg" />
+  <script src="images-data.js"></script>
+  <script src="common-header-footer.js"></script>
+  <link rel="stylesheet" href="common-styles.css">
+  <style>
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2em 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background: #004d99;
+    }
+    .milestone {
+      position: relative;
+      margin: 2em 0;
+      width: calc(50% - 2em);
+    }
+    .milestone:nth-child(odd) {
+      left: 0;
+    }
+    .milestone:nth-child(even) {
+      left: calc(50% + 2em);
+    }
+    .milestone::before {
+      content: '';
+      position: absolute;
+      top: 0.5em;
+      width: 12px;
+      height: 12px;
+      background: #004d99;
+      border-radius: 50%;
+    }
+    .milestone:nth-child(odd)::before {
+      right: -2.5em;
+    }
+    .milestone:nth-child(even)::before {
+      left: -2.5em;
+    }
+  </style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <div class="content" style="padding: 2em; max-width: 1200px; margin: 0 auto;">
+    <h2 style="color: #ffffff; text-align: center; margin-bottom: 1.5em;">Our Milestones</h2>
+    
+    <div class="timeline">
+      <div class="milestone">
+        <div style="background: rgba(0,28,56,0.5); padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+          <h3 style="color: #ffffff; margin-bottom: 0.5em;">2021</h3>
+          <p style="color: #cccccc;">Founded ABM Engineering Group with a vision to revolutionize construction services.</p>
+        </div>
+      </div>
+      
+      <div class="milestone">
+        <div style="background: rgba(0,28,56,0.5); padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+          <h3 style="color: #ffffff; margin-bottom: 0.5em;">2022</h3>
+          <p style="color: #cccccc;">Completed our first major residential project and expanded into commercial construction.</p>
+        </div>
+      </div>
+      
+      <div class="milestone">
+        <div style="background: rgba(0,28,56,0.5); padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+          <h3 style="color: #ffffff; margin-bottom: 0.5em;">2023</h3>
+          <p style="color: #cccccc;">Introduced advanced 3D design services and expanded our project portfolio.</p>
+        </div>
+      </div>
+      
+      <div class="milestone">
+        <div style="background: rgba(0,28,56,0.5); padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+          <h3 style="color: #ffffff; margin-bottom: 0.5em;">2024</h3>
+          <p style="color: #cccccc;">Achieved significant growth in industrial projects and client satisfaction.</p>
+        </div>
+      </div>
+      
+      <div class="milestone">
+        <div style="background: rgba(0,28,56,0.5); padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+          <h3 style="color: #ffffff; margin-bottom: 0.5em;">2025</h3>
+          <p style="color: #cccccc;">Expanding operations with innovative construction technologies and sustainable practices.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer-placeholder"></div>
+  <script>
+    if (typeof injectHeaderFooter === 'function') {
+      injectHeaderFooter('header-placeholder', 'footer-placeholder');
+    }
+  </script>
+</body>
+</html>

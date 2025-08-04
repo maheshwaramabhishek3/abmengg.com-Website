@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - ABM ENGINEERING GROUP</title>
+  <link rel="icon" type="image/jpeg" href="Images/ABMENGG LOGO 092025.jpg" />
+  <script src="images-data.js"></script>
+  <script src="common-header-footer.js"></script>
+  <link rel="stylesheet" href="common-styles.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <div class="content" style="padding: 2em; max-width: 1200px; margin: 0 auto;">
+    <h2 style="color: #ffffff; text-align: center; margin-bottom: 1.5em;">Contact Us</h2>
+    
+    <!-- Google Maps Section -->
+    <div style="margin-bottom: 2em; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7150661030684!2d78.57819490697729!3d17.36750748167221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zMTfCsDIyJzAzLjAiTiA3OMKwMzQnNDEuNSJF!5e0!3m2!1sen!2sin!4v1707041171599!5m2!1sen!2sin&title=ABM Engineering Group&markers=color:red%7Clabel:ABM%7C17.36750748167221,78.57819490697729"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2em;">
+      <div class="contact-info" style="background: rgba(0,28,56,0.5); padding: 2em; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+        <h3 style="color: #ffffff; margin-bottom: 1em;">Get in Touch</h3>
+        <div style="color: #cccccc; margin-bottom: 1.5em;">
+          <p style="margin-bottom: 0.5em;"><strong>Address:</strong><br>
+            ABM Engineering Group<br>
+            (Planners, Designers and Land Surveyors)<br>
+            Plot No. 401, Near Vishnu Apartments<br>
+            Uppal, Hyderabad<br>
+            Telangana 500039</p>
+          
+          <p style="margin-bottom: 0.5em;"><strong>Phone:</strong><br>
+            +91 8074395382<br>
+            +91 8121333023</p>
+          
+          <p style="margin-bottom: 0.5em;"><strong>Email:</strong><br>
+            vishwakarmaabmgroups@gmail.com</p>
+          
+          <p style="margin-bottom: 0.5em;"><strong>Registration:</strong><br>
+            Reg. No.: UDYAM-TS-09-0106608</p>
+        </div>
+        <div style="margin-top: 1em;">
+          <a href="https://wa.me/c/918074395383" target="_blank" style="display: inline-block; background: #25D366; color: white; text-decoration: none; padding: 0.8em 1.5em; border-radius: 4px; font-weight: bold;">Contact us on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="contact-form" style="background: rgba(0,28,56,0.5); padding: 2em; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+        <h3 style="color: #ffffff; margin-bottom: 1em;">Send us a Message</h3>
+        <form style="display: flex; flex-direction: column; gap: 1em;">
+          <div>
+            <label for="name" style="color: #ffffff; display: block; margin-bottom: 0.5em;">Name:</label>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5em; border-radius: 4px; border: 1px solid #cccccc;">
+          </div>
+          
+          <div>
+            <label for="email" style="color: #ffffff; display: block; margin-bottom: 0.5em;">Email:</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5em; border-radius: 4px; border: 1px solid #cccccc;">
+          </div>
+          
+          <div>
+            <label for="phone" style="color: #ffffff; display: block; margin-bottom: 0.5em;">Phone:</label>
+            <input type="tel" id="phone" name="phone" style="width: 100%; padding: 0.5em; border-radius: 4px; border: 1px solid #cccccc;">
+          </div>
+          
+          <div>
+            <label for="message" style="color: #ffffff; display: block; margin-bottom: 0.5em;">Message:</label>
+            <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 0.5em; border-radius: 4px; border: 1px solid #cccccc;"></textarea>
+          </div>
+          
+          <button type="submit" style="background: #004d99; color: white; padding: 0.8em 1.5em; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="footer-placeholder"></div>
+  <script>
+    if (typeof injectHeaderFooter === 'function') {
+      injectHeaderFooter('header-placeholder', 'footer-placeholder');
+    }
+  </script>
+</body>
+</html>
