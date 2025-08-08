@@ -2,9 +2,50 @@
 function injectHeaderFooter(headerId, footerId) {
   // Header HTML (copied exactly from index.html)
   const headerHTML = `
+    <style>
+      /* Responsive header and navbar styles */
+      .abm-header {
+        width: 100%;
+        background: transparent;
+        padding: 1.5em 0 0 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      }
+      .abm-navbar {
+        position: sticky;
+        top: 0; left: 0; right: 0;
+        z-index: 1000;
+        background: #001c38ff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        width: 100%;
+        overflow-x: auto;
+      }
+      .abm-navbar-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 1em;
+      }
+      @media (max-width: 700px) {
+        .abm-header {
+          flex-direction: column;
+          align-items: center;
+        }
+        .abm-navbar-links {
+          flex-direction: column;
+          gap: 0.5em;
+        }
+        .abm-navbar a {
+          width: 100%;
+          box-sizing: border-box;
+        }
+      }
+      body {
+        overflow-x: hidden;
+      }
+    </style>
     <div>
-      <header style="width:100vw; margin-left:calc(-50vw + 50%); margin-right:calc(-50vw + 50%); background:transparent; padding:1.5em 0 0 0; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
-        <div style="display: flex; align-items: center; justify-content: center; gap: 1em;">
+      <header class="abm-header">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1em; flex-wrap: wrap;">
           <img src="Images/ABMENGG LOGO 092025.jpg" alt="ABM Logo" style="height: 150px; width: 300px; object-fit: cover; object-position: center; clip-path: inset(2% 0); border-radius: 28px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);" />
           <div style="display: flex; flex-direction: column; justify-content: center;">
             <h1 style="margin: 0; line-height: 1.0; color: #ffffff; font-size: 3.5em;">ABM</h1>
@@ -14,8 +55,8 @@ function injectHeaderFooter(headerId, footerId) {
         </div>
         <div class="tagline" style="margin-top:0.5em;"><span class="tagline-text">|| Building the Future, Restoring the Past ||</span></div>
       </header>
-      <nav style="position: sticky; top: 0; left: 0; right: 0; z-index: 1000; background: #001c38ff; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
-        <div style="display: flex; justify-content: left; gap: 1em;">
+      <nav class="abm-navbar">
+        <div class="abm-navbar-links">
           <a href="index.html" id="nav-home" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Home</a>
           <a href="about.html" id="nav-about" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">About Us</a>
           <a href="services.html" id="nav-services" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Services</a>
