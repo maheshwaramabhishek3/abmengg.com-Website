@@ -24,15 +24,37 @@ function injectHeaderFooter(headerId, footerId) {
         flex-wrap: wrap;
         justify-content: left;
         gap: 1em;
+        transition: max-height 0.3s ease;
+      }
+      .abm-navbar-hamburger {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 2em;
+        color: #fff;
+        cursor: pointer;
+        margin: 0.5em 1em 0.5em 0.5em;
+        z-index: 1100;
       }
       @media (max-width: 700px) {
         .abm-header {
           flex-direction: column;
           align-items: center;
         }
+        .abm-navbar-hamburger {
+          display: block;
+        }
         .abm-navbar-links {
           flex-direction: column;
           gap: 0.5em;
+          max-height: 0;
+          overflow: hidden;
+          background: #001c38ff;
+          width: 100%;
+        }
+        .abm-navbar-links.open {
+          max-height: 500px;
+          padding-bottom: 1em;
         }
         .abm-navbar a {
           width: 100%;
@@ -56,6 +78,9 @@ function injectHeaderFooter(headerId, footerId) {
         <div class="tagline" style="margin-top:0.5em;"><span class="tagline-text">|| Building the Future, Restoring the Past ||</span></div>
       </header>
       <nav class="abm-navbar">
+        <button class="abm-navbar-hamburger" aria-label="Open menu" onclick="document.querySelector('.abm-navbar-links').classList.toggle('open')">
+          &#9776;
+        </button>
         <div class="abm-navbar-links">
           <a href="index.html" id="nav-home" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Home</a>
           <a href="about.html" id="nav-about" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">About Us</a>
@@ -70,13 +95,31 @@ function injectHeaderFooter(headerId, footerId) {
     <script>
       // Highlight current page in navigation
       const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-      const navLinks = document.querySelectorAll('nav a');
+      const navLinks = document.querySelectorAll('nav .abm-navbar-links a');
       navLinks.forEach(link => {
         if (link.getAttribute('href') === currentPage) {
           link.classList.add('active');
           link.style.backgroundColor = '#004d99';
         }
       });
+      // Hamburger menu toggle for mobile
+      function setupHamburger() {
+        const hamburger = document.querySelector('.abm-navbar-hamburger');
+        const links = document.querySelector('.abm-navbar-links');
+        if (!hamburger || !links) return;
+        hamburger.addEventListener('click', function() {
+          links.classList.toggle('open');
+        });
+        // Close menu when clicking outside (mobile only)
+        document.addEventListener('click', function(e) {
+          if (window.innerWidth > 700) return;
+          if (!links.classList.contains('open')) return;
+          if (!links.contains(e.target) && !hamburger.contains(e.target)) {
+            links.classList.remove('open');
+          }
+        });
+      }
+      setupHamburger();
     </script>
   `;
   // Footer HTML (copied exactly from index.html)
