@@ -95,7 +95,7 @@ function injectHeaderFooter(headerId, footerId) {
         <div class="tagline" style="margin-top:0.5em;"><span class="tagline-text">|| Building the Future, Restoring the Past ||</span></div>
       </header>
     <nav class="abm-navbar" style="display: flex; align-items: center; flex-direction: row; justify-content: flex-start; flex-wrap: wrap;">
-      <span class="abm-navbar-current-page"></span>
+  <!-- Removed abm-navbar-current-page span to eliminate black 'Home' text above navbar -->
   <!-- Quick navigation buttons removed as requested -->
       <div class="abm-navbar-links">
         <a href="index.html" id="nav-home" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Home</a>
@@ -197,6 +197,7 @@ function injectHeaderFooter(headerId, footerId) {
         Phone: +91 8074395382, +91 8121333023<br>
         <a href="https://wa.me/c/918074395383" target="_blank" style="color: #25D366; text-decoration: underline; font-weight: bold;">View Catalogue</a>
       </p>
+  <!-- Removed duplicate visit count div above social icons -->
       <style>
         .abm-social-flat {
           display: inline-flex;
@@ -220,14 +221,15 @@ function injectHeaderFooter(headerId, footerId) {
         .abm-social-flat.linkedin { --abm-social-bg: #0077b5; --abm-social-hover: #005983; }
         .abm-social-flat.facebook { --abm-social-bg: #3b5998; --abm-social-hover: #2d4373; }
       </style>
-      <div style="margin: 1.5em 0 0 0; text-align: center;">
+  <div style="margin: 1.5em 0 0 0; text-align: center;">
         <span style="font-size: 1.1em; color: #fff; margin-right: 0.7em;">Connect with us:</span>
   <a href="https://www.instagram.com/abm_surveyors/#" target="_blank" class="abm-social-flat instagram" title="ABM Surveyors Instagram"><i class="fab fa-instagram"></i></a>
   <a href="https://www.instagram.com/abm_architects_and_engineers/" target="_blank" class="abm-social-flat instagram" title="ABM Architects & Engineers Instagram"><i class="fab fa-instagram"></i></a>
   <a href="https://www.instagram.com/structural_engineering_india/#" target="_blank" class="abm-social-flat instagram" title="ABM Education Instagram"><i class="fab fa-instagram"></i></a>
   <a href="https://wa.me/c/918074395383" target="_blank" class="abm-social-flat whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
   <a href="https://in.linkedin.com/company/abm-groups" target="_blank" class="abm-social-flat linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-  <a href="https://www.facebook.com/vishwakarmaabmgroups/" target="_blank" class="abm-social-flat facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.facebook.com/vishwakarmaabmgroups/" target="_blank" class="abm-social-flat facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <div id="abm-visit-count" style="font-size:0.95em; color:#b2b2b2; margin-top:0.5em;"></div>
       </div>
     </footer>
   `;
@@ -239,5 +241,13 @@ function injectHeaderFooter(headerId, footerId) {
   }
   if (footerId && document.getElementById(footerId)) {
     document.getElementById(footerId).innerHTML = footerHTML;
+    // Website visit count logic
+    try {
+      var count = localStorage.getItem('abmVisitCount');
+      count = count ? parseInt(count) + 1 : 1;
+      localStorage.setItem('abmVisitCount', count);
+      var countDiv = document.getElementById('abm-visit-count');
+  if (countDiv) countDiv.textContent = `Website visits: ${count}`;
+    } catch(e) {}
   }
 }
