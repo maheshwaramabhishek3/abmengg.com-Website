@@ -28,21 +28,42 @@ function injectHeaderFooter(headerId, footerId) {
       }
       .abm-navbar-hamburger {
         display: none;
-        background: none;
-        border: none;
-        font-size: 2em;
+        background: #001c38ff;
+        border: 2px solid #fff;
+        border-radius: 8px;
+        font-size: 1.5em;
         color: #fff;
         cursor: pointer;
-        margin: 0.5em 1em 0.5em 0.5em;
+        margin: 0.5em 0.5em 0.5em auto;
         z-index: 1100;
+        padding: 0.2em 0.6em;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        transition: background 0.2s, border 0.2s;
       }
       @media (max-width: 700px) {
         .abm-header {
           flex-direction: column;
           align-items: center;
         }
+        .abm-navbar {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+        .abm-navbar-current-page {
+          display: block;
+          color: #fff;
+          font-weight: bold;
+          font-size: 1em;
+          margin-left: 1em;
+          margin-right: 0.5em;
+          letter-spacing: 0.5px;
+          flex: 0 0 auto;
+        }
         .abm-navbar-hamburger {
           display: block;
+          margin-left: auto;
         }
         .abm-navbar-links {
           flex-direction: column;
@@ -77,11 +98,13 @@ function injectHeaderFooter(headerId, footerId) {
         </div>
         <div class="tagline" style="margin-top:0.5em;"><span class="tagline-text">|| Building the Future, Restoring the Past ||</span></div>
       </header>
-      <nav class="abm-navbar">
-        <button class="abm-navbar-hamburger" aria-label="Open menu" onclick="document.querySelector('.abm-navbar-links').classList.toggle('open')">
+      <nav class="abm-navbar" style="display: flex; align-items: center; width: 100%;">
+        <span class="abm-navbar-current-page" style="display:none;"></span>
+        <button class="abm-navbar-hamburger" aria-label="Open menu" onclick="document.querySelector('.abm-navbar-links').classList.toggle('open')" style="margin-left:auto;">
           &#9776;
         </button>
-        <div class="abm-navbar-links">
+      </nav>
+      <div class="abm-navbar-links">
           <a href="index.html" id="nav-home" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Home</a>
           <a href="about.html" id="nav-about" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">About Us</a>
           <a href="services.html" id="nav-services" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Services</a>
@@ -102,6 +125,29 @@ function injectHeaderFooter(headerId, footerId) {
           link.style.backgroundColor = '#004d99';
         }
       });
+      // Show current page name to left in mobile view
+      function updateCurrentPageLabel() {
+        var pageMap = {
+          'index.html': 'Home',
+          'about.html': 'About Us',
+          'services.html': 'Services',
+          'gallery.html': 'Gallery',
+          'projects.html': 'Project Works',
+          'milestone.html': 'Milestone',
+          'contact.html': 'Contact Us'
+        };
+        var label = pageMap[currentPage] || '';
+        var el = document.querySelector('.abm-navbar-current-page');
+        if (window.innerWidth <= 700 && label) {
+          el.textContent = label;
+          el.style.display = 'block';
+        } else {
+          el.textContent = '';
+          el.style.display = 'none';
+        }
+      }
+      window.addEventListener('resize', updateCurrentPageLabel);
+      updateCurrentPageLabel();
       // Hamburger menu toggle for mobile
       function setupHamburger() {
         const hamburger = document.querySelector('.abm-navbar-hamburger');
