@@ -57,20 +57,22 @@ function injectHeaderFooter(headerId, footerId) {
           flex-direction: row;
           justify-content: flex-start;
         }
-        .abm-navbar-current-page {
-          display: block;
-          color: #fff;
-          font-weight: bold;
-          font-size: 1em;
-          margin-left: 1em;
-          margin-right: 0.5em;
-          letter-spacing: 0.5px;
-          flex: 0 0 auto;
-        }
-        .abm-navbar-hamburger {
-          display: block;
-          margin-left: auto;
-        }
+          .abm-navbar-current-page {
+            display: block;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1em;
+            margin-left: 1em;
+            margin-right: 0.5em;
+            letter-spacing: 0.5px;
+            flex: 0 0 auto;
+            order: 0;
+          }
+          .abm-navbar-hamburger {
+            display: block;
+            margin-left: 0.5em;
+            order: 1;
+          }
         .abm-navbar-links {
           flex-direction: column;
           gap: 0.5em;
@@ -104,79 +106,86 @@ function injectHeaderFooter(headerId, footerId) {
         </div>
         <div class="tagline" style="margin-top:0.5em;"><span class="tagline-text">|| Building the Future, Restoring the Past ||</span></div>
       </header>
-  <nav class="abm-navbar">
-        <span class="abm-navbar-current-page" style="display:none;"></span>
-        <button class="abm-navbar-hamburger" aria-label="Open menu" onclick="document.querySelector('.abm-navbar-links').classList.toggle('open')" style="margin-left:auto;">
-          &#9776;
-        </button>
-      </nav>
+    <nav class="abm-navbar" style="display: flex; align-items: center; flex-direction: row; justify-content: flex-start;">
+      <span class="abm-navbar-current-page"></span>
+      <button class="abm-navbar-hamburger" aria-label="Open menu">
+        &#9776;
+      </button>
       <div class="abm-navbar-links">
-          <a href="index.html" id="nav-home" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Home</a>
-          <a href="about.html" id="nav-about" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">About Us</a>
-          <a href="services.html" id="nav-services" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Services</a>
-          <a href="gallery.html" id="nav-gallery" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Gallery</a>
-          <a href="projects.html" id="nav-projects" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Project Works</a>
-          <a href="milestone.html" id="nav-milestone" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Milestone</a>
-          <a href="contact.html" id="nav-contact" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Contact Us</a>
-        </div>
-      </nav>
+        <a href="index.html" id="nav-home" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Home</a>
+        <a href="about.html" id="nav-about" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">About Us</a>
+        <a href="services.html" id="nav-services" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Services</a>
+        <a href="gallery.html" id="nav-gallery" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Gallery</a>
+        <a href="projects.html" id="nav-projects" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Project Works</a>
+        <a href="milestone.html" id="nav-milestone" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Milestone</a>
+        <a href="contact.html" id="nav-contact" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Contact Us</a>
+      </div>
+    </nav>
     </div>
-    <script>
-      // Highlight current page in navigation
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-      const navLinks = document.querySelectorAll('nav .abm-navbar-links a');
+  <!-- Script moved outside injected HTML for reliable execution -->
+  `;
+  // Run navbar and current page label logic after header is inserted
+  setTimeout(function () {
+    function updateCurrentPageLabelAndNav() {
+      console.log('[ABM] updateCurrentPageLabelAndNav running');
+      var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      var pageMap = {
+        'index.html': 'Home',
+        'about.html': 'About Us',
+        'services.html': 'Services',
+        'gallery.html': 'Gallery',
+        'projects.html': 'Project Works',
+        'milestone.html': 'Milestone',
+        'contact.html': 'Contact Us'
+      };
+      var label = pageMap[currentPage] || '';
+      var el = document.querySelector('.abm-navbar-current-page');
+      if (el) {
+        if (window.innerWidth <= 700 && label) {
+          el.textContent = label;
+          el.style.display = 'block';
+          console.log('[ABM] Set current page name:', label);
+        } else {
+          el.textContent = '';
+          el.style.display = 'none';
+          console.log('[ABM] Hide current page name');
+        }
+      } else {
+        console.warn('[ABM] .abm-navbar-current-page element not found');
+      }
+      // Highlight nav link
+      var navLinks = document.querySelectorAll('nav .abm-navbar-links a');
       navLinks.forEach(link => {
         if (link.getAttribute('href') === currentPage) {
           link.classList.add('active');
           link.style.backgroundColor = '#004d99';
+        } else {
+          link.classList.remove('active');
+          link.style.backgroundColor = 'transparent';
         }
       });
-      // Show current page name to left in mobile view
-      function updateCurrentPageLabel() {
-        var pageMap = {
-          'index.html': 'Home',
-          'about.html': 'About Us',
-          'services.html': 'Services',
-          'gallery.html': 'Gallery',
-          'projects.html': 'Project Works',
-          'milestone.html': 'Milestone',
-          'contact.html': 'Contact Us'
-        };
-        var label = pageMap[currentPage] || '';
-        var el = document.querySelector('.abm-navbar-current-page');
-        if (window.innerWidth <= 700 && label) {
-          el.textContent = label;
-          el.style.display = 'block';
-        } else {
-          el.textContent = '';
-          el.style.display = 'none';
+    }
+    window.addEventListener('resize', updateCurrentPageLabelAndNav);
+    updateCurrentPageLabelAndNav();
+    // Hamburger menu toggle for mobile
+    function setupHamburger() {
+      const hamburger = document.querySelector('.abm-navbar-hamburger');
+      const links = document.querySelector('.abm-navbar-links');
+      if (!hamburger || !links) return;
+      hamburger.addEventListener('click', function () {
+        links.classList.toggle('open');
+      });
+      // Close menu when clicking outside (mobile only)
+      document.addEventListener('click', function (e) {
+        if (window.innerWidth > 700) return;
+        if (!links.classList.contains('open')) return;
+        if (!links.contains(e.target) && !hamburger.contains(e.target)) {
+          links.classList.remove('open');
         }
-      }
-      function runLabelUpdate() {
-        updateCurrentPageLabel();
-      }
-      window.addEventListener('resize', runLabelUpdate);
-      setTimeout(runLabelUpdate, 100); // Ensure after DOM insert
-      // Hamburger menu toggle for mobile
-      function setupHamburger() {
-        const hamburger = document.querySelector('.abm-navbar-hamburger');
-        const links = document.querySelector('.abm-navbar-links');
-        if (!hamburger || !links) return;
-        hamburger.addEventListener('click', function() {
-          links.classList.toggle('open');
-        });
-        // Close menu when clicking outside (mobile only)
-        document.addEventListener('click', function(e) {
-          if (window.innerWidth > 700) return;
-          if (!links.classList.contains('open')) return;
-          if (!links.contains(e.target) && !hamburger.contains(e.target)) {
-            links.classList.remove('open');
-          }
-        });
-      }
-      setupHamburger();
-    </script>
-  `;
+      });
+    }
+    setupHamburger();
+  }, 150);
   // Footer HTML (copied exactly from index.html)
   const footerHTML = `
     <footer class="about" style="margin-top:3em; width:100vw; margin-left:calc(-50vw + 50%); margin-right:calc(-50vw + 50%); background:#000000; padding:2em 0; border-radius:0; box-shadow:0 2px 8px rgba(0,0,0,0.07); color:#948787;">
