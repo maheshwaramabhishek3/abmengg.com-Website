@@ -11,13 +11,18 @@ function injectHeaderFooter(headerId, footerId) {
         box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       }
       .abm-navbar {
-        position: sticky;
-        top: 0; left: 0; right: 0;
-        z-index: 1000;
-        background: #001c38ff;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        width: 100%;
-        overflow-x: auto;
+          position: sticky;
+          top: 0; left: 0; right: 0;
+          z-index: 1000;
+          background: #001c38 !important;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+          width: 100%;
+          overflow-x: auto;
+      }
+      @media (min-width: 701px) {
+          .abm-navbar {
+            background: #001c38 !important;
+        }
       }
       .abm-navbar-links {
         display: flex;
@@ -25,6 +30,7 @@ function injectHeaderFooter(headerId, footerId) {
         justify-content: left;
         gap: 1em;
         transition: max-height 0.3s ease;
+        background: #001c38 !important;
       }
       .abm-navbar-hamburger {
         display: none;
@@ -98,7 +104,7 @@ function injectHeaderFooter(headerId, footerId) {
         </div>
         <div class="tagline" style="margin-top:0.5em;"><span class="tagline-text">|| Building the Future, Restoring the Past ||</span></div>
       </header>
-      <nav class="abm-navbar" style="display: flex; align-items: center; width: 100%;">
+  <nav class="abm-navbar">
         <span class="abm-navbar-current-page" style="display:none;"></span>
         <button class="abm-navbar-hamburger" aria-label="Open menu" onclick="document.querySelector('.abm-navbar-links').classList.toggle('open')" style="margin-left:auto;">
           &#9776;
@@ -146,8 +152,11 @@ function injectHeaderFooter(headerId, footerId) {
           el.style.display = 'none';
         }
       }
-      window.addEventListener('resize', updateCurrentPageLabel);
-      updateCurrentPageLabel();
+      function runLabelUpdate() {
+        updateCurrentPageLabel();
+      }
+      window.addEventListener('resize', runLabelUpdate);
+      setTimeout(runLabelUpdate, 100); // Ensure after DOM insert
       // Hamburger menu toggle for mobile
       function setupHamburger() {
         const hamburger = document.querySelector('.abm-navbar-hamburger');
