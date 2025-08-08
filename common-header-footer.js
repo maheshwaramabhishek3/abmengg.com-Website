@@ -2,6 +2,7 @@
 function injectHeaderFooter(headerId, footerId) {
   // Header HTML (copied exactly from index.html)
   const headerHTML = `
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
       /* Responsive header and navbar styles */
       .abm-header {
@@ -211,6 +212,38 @@ function injectHeaderFooter(headerId, footerId) {
         Phone: +91 8074395382, +91 8121333023<br>
         <a href="https://wa.me/c/918074395383" target="_blank" style="color: #25D366; text-decoration: underline; font-weight: bold;">View Catalogue</a>
       </p>
+      <style>
+        .abm-social-flat {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          margin: 0 5px;
+          font-size: 1.3em;
+          background: var(--abm-social-bg, #222);
+          transition: background 0.2s, transform 0.2s;
+        }
+        .abm-social-flat:hover {
+          background: var(--abm-social-hover, #444);
+          transform: scale(1.12);
+        }
+        .abm-social-flat.instagram { --abm-social-bg: #e4405f; --abm-social-hover: #c13584; }
+        .abm-social-flat.whatsapp { --abm-social-bg: #25d366; --abm-social-hover: #128c7e; }
+        .abm-social-flat.linkedin { --abm-social-bg: #0077b5; --abm-social-hover: #005983; }
+        .abm-social-flat.facebook { --abm-social-bg: #3b5998; --abm-social-hover: #2d4373; }
+      </style>
+      <div style="margin: 1.5em 0 0 0; text-align: center;">
+        <span style="font-size: 1.1em; color: #fff; margin-right: 0.7em;">Connect with us:</span>
+  <a href="https://www.instagram.com/abm_surveyors/#" target="_blank" class="abm-social-flat instagram" title="ABM Surveyors Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.instagram.com/abm_architects_and_engineers/" target="_blank" class="abm-social-flat instagram" title="ABM Architects & Engineers Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.instagram.com/structural_engineering_india/#" target="_blank" class="abm-social-flat instagram" title="ABM Education Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://wa.me/c/918074395383" target="_blank" class="abm-social-flat whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://in.linkedin.com/company/abm-groups" target="_blank" class="abm-social-flat linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  <a href="https://www.facebook.com/vishwakarmaabmgroups/" target="_blank" class="abm-social-flat facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
     </footer>
   `;
   // Insert header and footer into specified placeholders
