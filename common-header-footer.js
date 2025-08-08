@@ -171,9 +171,17 @@ function injectHeaderFooter(headerId, footerId) {
     function setupHamburger() {
       const hamburger = document.querySelector('.abm-navbar-hamburger');
       const links = document.querySelector('.abm-navbar-links');
+      const currentPageLabel = document.querySelector('.abm-navbar-current-page');
       if (!hamburger || !links) return;
       hamburger.addEventListener('click', function () {
         links.classList.toggle('open');
+        if (window.innerWidth <= 700 && currentPageLabel) {
+          if (links.classList.contains('open')) {
+            currentPageLabel.style.display = 'none';
+          } else {
+            currentPageLabel.style.display = 'block';
+          }
+        }
       });
       // Close menu when clicking outside (mobile only)
       document.addEventListener('click', function (e) {
@@ -181,6 +189,7 @@ function injectHeaderFooter(headerId, footerId) {
         if (!links.classList.contains('open')) return;
         if (!links.contains(e.target) && !hamburger.contains(e.target)) {
           links.classList.remove('open');
+          if (currentPageLabel) currentPageLabel.style.display = 'block';
         }
       });
     }
