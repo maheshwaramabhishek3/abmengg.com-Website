@@ -229,7 +229,7 @@ function injectHeaderFooter(headerId, footerId) {
   <a href="https://wa.me/c/918074395383" target="_blank" class="abm-social-flat whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
   <a href="https://in.linkedin.com/company/abm-groups" target="_blank" class="abm-social-flat linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://www.facebook.com/vishwakarmaabmgroups/" target="_blank" class="abm-social-flat facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-  <div id="abm-visit-count" style="font-size:0.95em; color:#b2b2b2; margin-top:0.5em;"></div>
+  <div id="abm-visit-count" style="font-size:0.85em; color:#b2b2b2; margin-top:0.5em; background:#fff; width:100vw; text-align:left; padding:0.2em 1.2em; position:relative; left:50%; transform:translateX(-50%);"></div>
       </div>
     </footer>
   `;
@@ -246,8 +246,20 @@ function injectHeaderFooter(headerId, footerId) {
       var count = localStorage.getItem('abmVisitCount');
       count = count ? parseInt(count) + 1 : 1;
       localStorage.setItem('abmVisitCount', count);
-      var countDiv = document.getElementById('abm-visit-count');
-  if (countDiv) countDiv.textContent = `Website visits: ${count}`;
+  var countDiv = document.getElementById('abm-visit-count');
+        if (countDiv) {
+          countDiv.innerHTML = `
+            <span style='display:inline-block;'>Website visits: ${count} | All rights reserved</span>
+            <span style='float:right;'><a href='#' id='abm-scroll-top' style='color:#1976d2; text-decoration:underline; cursor:pointer; font-size:1.05em; font-weight:bold;'>Scroll to Top</a></span>
+          `;
+          var scrollTopBtn = document.getElementById('abm-scroll-top');
+          if (scrollTopBtn) {
+            scrollTopBtn.onclick = function(e) {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+          }
+        }
     } catch(e) {}
   }
 }
