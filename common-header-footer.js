@@ -34,61 +34,48 @@ function injectHeaderFooter(headerId, footerId) {
         background: #001c38 !important;
       }
       .abm-navbar-hamburger {
-        display: none;
-        background: #001c38ff;
-        border: 2px solid #fff;
-        border-radius: 8px;
-        font-size: 1.5em;
-        color: #fff;
-        cursor: pointer;
-        margin: 0.5em 0.5em 0.5em auto;
-        z-index: 1100;
-        padding: 0.2em 0.6em;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-        transition: background 0.2s, border 0.2s;
+        display: none !important;
       }
       @media (max-width: 700px) {
+        .abm-navbar-quicknav {
+          display: block;
+          width: 100vw;
+          background: #001c38ff;
+          color: #fff;
+          border: none;
+          font-size: 1.1em;
+          padding: 0.7em 1em;
+          margin-bottom: 0.5em;
+        }
         .abm-header {
           flex-direction: column;
           align-items: center;
         }
         .abm-navbar {
           display: flex;
-          align-items: center;
+          flex-wrap: wrap;
           flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          width: 100vw;
+          overflow-x: auto;
+        }
+        .abm-navbar-links {
+          display: flex !important;
+          flex-wrap: wrap;
+          flex-direction: row;
+          gap: 0.5em;
+          width: 100vw;
+          max-height: none !important;
+          overflow: visible !important;
+          background: #001c38ff;
           justify-content: flex-start;
         }
-          .abm-navbar-current-page {
-            display: block;
-            color: #fff;
-            font-weight: bold;
-            font-size: 1em;
-            margin-left: 1em;
-            margin-right: 0.5em;
-            letter-spacing: 0.5px;
-            flex: 0 0 auto;
-            order: 0;
-          }
-          .abm-navbar-hamburger {
-            display: block;
-            margin-left: 0.5em;
-            order: 1;
-          }
-        .abm-navbar-links {
-          flex-direction: column;
-          gap: 0.5em;
-          max-height: 0;
-          overflow: hidden;
-          background: #001c38ff;
-          width: 100%;
-        }
-        .abm-navbar-links.open {
-          max-height: 500px;
-          padding-bottom: 1em;
-        }
         .abm-navbar a {
-          width: 100%;
+          min-width: 120px;
+          flex: 1 1 120px;
           box-sizing: border-box;
+          margin-bottom: 0.5em;
         }
       }
       body {
@@ -107,11 +94,9 @@ function injectHeaderFooter(headerId, footerId) {
         </div>
         <div class="tagline" style="margin-top:0.5em;"><span class="tagline-text">|| Building the Future, Restoring the Past ||</span></div>
       </header>
-    <nav class="abm-navbar" style="display: flex; align-items: center; flex-direction: row; justify-content: flex-start;">
+    <nav class="abm-navbar" style="display: flex; align-items: center; flex-direction: row; justify-content: flex-start; flex-wrap: wrap;">
       <span class="abm-navbar-current-page"></span>
-      <button class="abm-navbar-hamburger" aria-label="Open menu">
-        &#9776;
-      </button>
+  <!-- Quick navigation buttons removed as requested -->
       <div class="abm-navbar-links">
         <a href="index.html" id="nav-home" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Home</a>
         <a href="about.html" id="nav-about" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">About Us</a>
@@ -119,7 +104,7 @@ function injectHeaderFooter(headerId, footerId) {
         <a href="gallery.html" id="nav-gallery" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Gallery</a>
         <a href="projects.html" id="nav-projects" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Project Works</a>
         <a href="milestone.html" id="nav-milestone" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Milestone</a>
-        <a href="contact.html" id="nav-contact" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Contact Us</a>
+        <a href="contact.html" id="nav-contact" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Contact</a>
       </div>
     </nav>
     </div>
@@ -249,6 +234,8 @@ function injectHeaderFooter(headerId, footerId) {
   // Insert header and footer into specified placeholders
   if (headerId && document.getElementById(headerId)) {
     document.getElementById(headerId).innerHTML = headerHTML;
+    // Show quicknav dropdown only on mobile
+  // Quick navigation buttons removed as requested
   }
   if (footerId && document.getElementById(footerId)) {
     document.getElementById(footerId).innerHTML = footerHTML;
