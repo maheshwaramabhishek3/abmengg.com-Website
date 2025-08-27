@@ -88,7 +88,30 @@ function injectHeaderFooter(headerId, footerId) {
       }
     </style>
     <div>
-      <header class="abm-header">
+      <header class="abm-header" style="position:relative;">
+        <div style="position:absolute; top:10px; right:20px; z-index:1100;">
+          <label for="abm-language-select" style="font-size:0.85em; color:#fff; background:#001c38; padding:2px 8px; border-radius:6px; margin-right:6px;">Choose Language:</label>
+          <select id="abm-language-select" style="font-size:0.85em; padding:2px 8px; border-radius:6px; background:#fff; color:#001c38; border:none; outline:none;">
+            <option value="en">English</option>
+            <option value="te">Telugu</option>
+            <option value="hi">Hindi</option>
+            <option value="ta">Tamil</option>
+            <option value="kn">Kannada</option>
+            <option value="mr">Marathi</option>
+            <option value="gu">Gujarati</option>
+            <option value="bn">Bengali</option>
+            <option value="pa">Punjabi</option>
+            <option value="ur">Urdu</option>
+            <option value="ml">Malayalam</option>
+            <option value="or">Odia</option>
+            <option value="as">Assamese</option>
+            <option value="fa">Persian</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="zh-CN">Chinese (Simplified)</option>
+            <option value="ar">Arabic</option>
+          </select>
+        </div>
         <div style="display: flex; align-items: center; justify-content: center; gap: 1em; flex-wrap: wrap;">
           <img src="Images/ABMENGG LOGO 092025.jpg" alt="ABM Logo" style="height: 150px; width: 300px; object-fit: cover; object-position: center; clip-path: inset(2% 0); border-radius: 28px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);" />
           <div style="display: flex; flex-direction: column; justify-content: center;">
@@ -100,7 +123,7 @@ function injectHeaderFooter(headerId, footerId) {
         <div class="tagline" style="margin-top:0.5em;"><span class="tagline-text">|| Building the Future, Restoring the Past ||</span></div>
       </header>
   </div>
-  <nav class="abm-navbar" style="display: flex; align-items: center; flex-direction: row; justify-content: flex-start; flex-wrap: wrap;">
+    <nav class="abm-navbar" style="display: flex; align-items: center; flex-direction: row; justify-content: flex-start; flex-wrap: wrap;">
   <!-- Removed abm-navbar-current-page span to eliminate black 'Home' text above navbar -->
   <!-- Quick navigation buttons removed as requested -->
       <div class="abm-navbar-links">
@@ -116,9 +139,17 @@ function injectHeaderFooter(headerId, footerId) {
     </div>
   <!-- Script moved outside injected HTML for reliable execution -->
   `;
-  // Run navbar and current page label logic after header is inserted
+  // Google Translate logic for language selection
   setTimeout(function () {
-    function updateCurrentPageLabelAndNav() {
+    var langSelect = document.getElementById('abm-language-select');
+    if (langSelect) {
+      langSelect.addEventListener('change', function() {
+        var lang = langSelect.value;
+        var gtUrl = 'https://translate.google.com/translate?hl=' + lang + '&sl=auto&tl=' + lang + '&u=' + encodeURIComponent(window.location.href);
+        window.open(gtUrl, '_blank');
+      });
+    }
+  function updateCurrentPageLabelAndNav() {
       console.log('[ABM] updateCurrentPageLabelAndNav running');
       var currentPage = window.location.pathname.split('/').pop() || 'index.html';
       var pageMap = {
@@ -185,7 +216,7 @@ function injectHeaderFooter(headerId, footerId) {
         }
       });
     }
-    setupHamburger();
+  setupHamburger();
   }, 150);
   // Footer HTML (copied exactly from index.html)
   const footerHTML = `
