@@ -99,7 +99,8 @@ function injectHeaderFooter(headerId, footerId) {
         </div>
         <div class="tagline" style="margin-top:0.5em;"><span class="tagline-text">|| Building the Future, Restoring the Past ||</span></div>
       </header>
-    <nav class="abm-navbar" style="display: flex; align-items: center; flex-direction: row; justify-content: flex-start; flex-wrap: wrap;">
+  </div>
+  <nav class="abm-navbar" style="display: flex; align-items: center; flex-direction: row; justify-content: flex-start; flex-wrap: wrap;">
   <!-- Removed abm-navbar-current-page span to eliminate black 'Home' text above navbar -->
   <!-- Quick navigation buttons removed as requested -->
       <div class="abm-navbar-links">
