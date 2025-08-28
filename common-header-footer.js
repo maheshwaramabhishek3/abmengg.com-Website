@@ -91,9 +91,9 @@ function injectHeaderFooter(headerId, footerId) {
       <header class="abm-header" style="position:relative;">
         <div style="position:absolute; top:10px; right:20px; z-index:1100; display:flex; align-items:center; gap:8px;">
           <span style="font-size:0.85em; color:#fff; background:#001c38; padding:2px 8px; border-radius:6px; margin-right:6px;">Choose Language:</span>
-          <span style="font-size:0.85em; color:#fff; background:#1976d2; padding:2px 8px; border-radius:6px; cursor:pointer;">English</span>
-          <span style="font-size:0.85em; color:#fff; background:#1976d2; padding:2px 8px; border-radius:6px; cursor:pointer;">Telugu</span>
-          <span style="font-size:0.85em; color:#fff; background:#1976d2; padding:2px 8px; border-radius:6px; cursor:pointer;">Hindi</span>
+          <span id="abm-lang-en" style="font-size:0.85em; color:#fff; background:#1976d2; padding:2px 8px; border-radius:6px; cursor:pointer;">English</span>
+          <span id="abm-lang-te" style="font-size:0.85em; color:#fff; background:#1976d2; padding:2px 8px; border-radius:6px; cursor:pointer;">తెలుగు</span>
+          <span id="abm-lang-hi" style="font-size:0.85em; color:#fff; background:#1976d2; padding:2px 8px; border-radius:6px; cursor:pointer;">हिन्दी</span>
           <select id="abm-other-languages" style="font-size:0.85em; padding:2px 8px; border-radius:6px; background:#fff; color:#001c38; border:none; outline:none; margin-left:8px;">
             <option value="" disabled selected>Other Languages</option>
             <option value="ta">Tamil</option>
@@ -142,8 +142,22 @@ function injectHeaderFooter(headerId, footerId) {
   `;
   // Google Translate logic for language selection
   setTimeout(function () {
-    var langSelect = document.getElementById('abm-language-select');
-  // Language options are now static text links, no action on click
+    // Make English, Telugu, Hindi options functional
+    var langMap = {
+      'abm-lang-en': 'en',
+      'abm-lang-te': 'te',
+      'abm-lang-hi': 'hi'
+    };
+    Object.keys(langMap).forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('click', function() {
+          var lang = langMap[id];
+          var gtUrl = 'https://translate.google.com/translate?hl=' + lang + '&sl=auto&tl=' + lang + '&u=' + encodeURIComponent(window.location.href);
+          window.open(gtUrl, '_blank');
+        });
+      }
+    });
   function updateCurrentPageLabelAndNav() {
       console.log('[ABM] updateCurrentPageLabelAndNav running');
       var currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -218,7 +232,7 @@ function injectHeaderFooter(headerId, footerId) {
     <footer class="about" style="margin-top:3em; width:100vw; margin-left:calc(-50vw + 50%); margin-right:calc(-50vw + 50%); background:#000000; padding:2em 0; border-radius:0; box-shadow:0 2px 8px rgba(0,0,0,0.07); color:#948787;">
       <h3 style="margin-bottom: 0.3em;">About Us</h3>
       <p style="margin-top: 0.1em; margin-bottom: 1.2em;">
-        ABM Engineering Group is a leading construction company<br> specializing in residential, commercial, and industrial projects.<br> 
+        ABM Engineering Group is a leading construction company specializing in residential, commercial, and industrial projects.
         We deliver quality, safety, and innovation in every build.
       </p>
       <h3 style="margin-bottom: 0.3em;">Contact</h3>
