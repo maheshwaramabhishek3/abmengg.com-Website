@@ -230,15 +230,10 @@ function injectHeaderFooter(headerId, footerId) {
   // Footer HTML (copied exactly from index.html)
   const footerHTML = `
     <footer class="about" style="margin-top:3em; width:100vw; margin-left:calc(-50vw + 50%); margin-right:calc(-50vw + 50%); background:#000000; padding:2em 0; border-radius:0; box-shadow:0 2px 8px rgba(0,0,0,0.07); color:#948787;">
-      <h3 style="margin-bottom: 0.3em;">About Us</h3>
-      <p style="margin-top: 0.1em; margin-bottom: 1.2em;">
-        ABM Engineering Group is a leading construction company specializing in residential, commercial, and industrial projects.
-        We deliver quality, safety, and innovation in every build.
-      </p>
-      <h3 style="margin-bottom: 0.3em;">Contact</h3>
-      <p style="margin-top: 0.1em;">
-        ABM Engineering Group<br>
-        Reg. No.: UDYAM-TS-09-0106608<br>
+      <h3 style="margin-bottom: 0.3em;">ABM Engineering Group</h3>
+            <p style="margin-top: 0.0em;">
+      <br>
+        Reg. No.: UDYAM-TS-09-0106608<br>  
         Email: vishwakarmaabmgroups@gmail.com<br>
         Phone: +91 8074395382, +91 8121333023<br>
         <a href="https://wa.me/c/918074395383" target="_blank" style="color: #25D366; text-decoration: underline; font-weight: bold;">View Catalogue</a>
