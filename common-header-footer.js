@@ -89,12 +89,13 @@ function injectHeaderFooter(headerId, footerId) {
     </style>
     <div>
       <header class="abm-header" style="position:relative;">
-        <div style="position:absolute; top:10px; right:20px; z-index:1100;">
-          <label for="abm-language-select" style="font-size:0.85em; color:#fff; background:#001c38; padding:2px 8px; border-radius:6px; margin-right:6px;">Choose Language:</label>
-          <select id="abm-language-select" style="font-size:0.85em; padding:2px 8px; border-radius:6px; background:#fff; color:#001c38; border:none; outline:none;">
-            <option value="en">English</option>
-            <option value="te">Telugu</option>
-            <option value="hi">Hindi</option>
+        <div style="position:absolute; top:10px; right:20px; z-index:1100; display:flex; align-items:center; gap:8px;">
+          <span style="font-size:0.85em; color:#fff; background:#001c38; padding:2px 8px; border-radius:6px; margin-right:6px;">Choose Language:</span>
+          <span style="font-size:0.85em; color:#fff; background:#1976d2; padding:2px 8px; border-radius:6px; cursor:pointer;">English</span>
+          <span style="font-size:0.85em; color:#fff; background:#1976d2; padding:2px 8px; border-radius:6px; cursor:pointer;">Telugu</span>
+          <span style="font-size:0.85em; color:#fff; background:#1976d2; padding:2px 8px; border-radius:6px; cursor:pointer;">Hindi</span>
+          <select id="abm-other-languages" style="font-size:0.85em; padding:2px 8px; border-radius:6px; background:#fff; color:#001c38; border:none; outline:none; margin-left:8px;">
+            <option value="" disabled selected>Other Languages</option>
             <option value="ta">Tamil</option>
             <option value="kn">Kannada</option>
             <option value="mr">Marathi</option>
@@ -142,13 +143,7 @@ function injectHeaderFooter(headerId, footerId) {
   // Google Translate logic for language selection
   setTimeout(function () {
     var langSelect = document.getElementById('abm-language-select');
-    if (langSelect) {
-      langSelect.addEventListener('change', function() {
-        var lang = langSelect.value;
-        var gtUrl = 'https://translate.google.com/translate?hl=' + lang + '&sl=auto&tl=' + lang + '&u=' + encodeURIComponent(window.location.href);
-        window.open(gtUrl, '_blank');
-      });
-    }
+  // Language options are now static text links, no action on click
   function updateCurrentPageLabelAndNav() {
       console.log('[ABM] updateCurrentPageLabelAndNav running');
       var currentPage = window.location.pathname.split('/').pop() || 'index.html';
