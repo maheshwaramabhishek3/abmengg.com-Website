@@ -89,7 +89,7 @@ function injectHeaderFooter(headerId, footerId) {
     </style>
     <div>
       <header class="abm-header" style="position:relative;">
-        <div style="position:absolute; top:10px; right:20px; z-index:1100; display:flex; align-items:center; gap:8px;">
+  <div style="position:absolute; top:-18px; right:20px; z-index:1100; display:flex; align-items:center; gap:8px;">
           <span style="font-size:0.85em; color:#fff; background:#001c38; padding:2px 8px; border-radius:6px; margin-right:6px;">Choose Language:</span>
           <span id="abm-lang-en" style="font-size:0.85em; color:#fff; background:#1976d2; padding:2px 8px; border-radius:6px; cursor:pointer;">English</span>
           <span id="abm-lang-te" style="font-size:0.85em; color:#fff; background:#1976d2; padding:2px 8px; border-radius:6px; cursor:pointer;">తెలుగు</span>
