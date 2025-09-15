@@ -10,6 +10,37 @@
   <link rel="stylesheet" href="common-styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="contact-popup.js"></script>
+  <style>
+    .section h2 {
+      text-align: center;
+      padding: 15px 30px;
+      font-size: 32px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 30px auto;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      display: inline-block;
+      position: relative;
+      font-weight: 600;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+      max-width: 80%;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .section h2:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(135deg, #243B55, #141E30);
+    }
+
+    .section {
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
 </head>
 <body>
   <div id="header-placeholder"></div>
@@ -28,8 +59,73 @@
         const h2 = document.createElement('h2');
         h2.textContent = title;
         section.appendChild(h2);
+        
         const grid = document.createElement('div');
         grid.className = 'images-grid';
+        
+        images.forEach((src, i) => {
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = `${altPrefix} ${i + 1}`;
+          grid.appendChild(img);
+        });
+        section.appendChild(grid);
+
+        // Add Instagram button after the photos for all sections
+        // Create Instagram link styled as a button
+        const instaLink = document.createElement('a');
+        // Set different Instagram links and text based on section
+        if (title === 'Structural Designing') {
+            instaLink.href = 'https://www.instagram.com/structural_engineering_india/#';
+        } else if (title === 'Photos ABMS') {
+            instaLink.href = 'https://www.instagram.com/abm_surveyors/#';
+        } else {
+            instaLink.href = 'https://www.instagram.com/abm_architects_and_engineers/';
+        }
+        instaLink.target = '_blank';
+        instaLink.style.display = 'inline-block';
+        instaLink.style.textAlign = 'center';
+        instaLink.style.margin = '20px auto 40px auto';
+        instaLink.style.padding = '12px 24px';
+        instaLink.style.backgroundColor = '#e4405f';
+        instaLink.style.color = '#ffffff';
+        instaLink.style.textDecoration = 'none';
+        instaLink.style.fontSize = '1.1em';
+        instaLink.style.borderRadius = '30px';
+        instaLink.style.boxShadow = '0 2px 8px rgba(228,64,95,0.3)';
+        instaLink.style.transition = 'all 0.3s ease';
+        instaLink.style.cursor = 'pointer';
+        
+        // Set button text with additional text for specific sections
+        let buttonHTML = '<i class="fab fa-instagram" style="margin-right: 8px;"></i>Follow & View more Updates in Instagram';
+        if (title === 'Photos ABMC' || title === '3D Elevation Designing') {
+            buttonHTML += '<br><span style="font-size: 0.9em; display: block; margin-top: 5px; color: #1e88e5; text-shadow: 0 1px 2px rgba(0,0,0,0.3); font-weight: bold;">Vishwakarma ABM Architects and Engineers</span>';
+        } else if (title === 'Photos ABMS') {
+            buttonHTML += '<br><span style="font-size: 0.9em; display: block; margin-top: 5px; color: #1e88e5; text-shadow: 0 1px 2px rgba(0,0,0,0.3); font-weight: bold;">ABM Land and Engineering Surveyors</span>';
+        } else if (title === 'Structural Designing') {
+            buttonHTML += '<br><span style="font-size: 0.9em; display: block; margin-top: 5px; color: #1e88e5; text-shadow: 0 1px 2px rgba(0,0,0,0.3); font-weight: bold;">Structural Engineering India</span>';
+        }
+        instaLink.innerHTML = buttonHTML;
+        
+        // Add hover effect
+        instaLink.onmouseover = function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.boxShadow = '0 4px 12px rgba(228,64,95,0.4)';
+            this.style.backgroundColor = '#dc2b4c';
+        };
+        instaLink.onmouseout = function() {
+            this.style.transform = 'scale(1)';
+            this.style.boxShadow = '0 2px 8px rgba(228,64,95,0.3)';
+            this.style.backgroundColor = '#e4405f';
+        };
+
+        // Create a container for center alignment
+        const buttonContainer = document.createElement('div');
+        buttonContainer.style.textAlign = 'center';
+        buttonContainer.appendChild(instaLink);
+        section.appendChild(buttonContainer);
+
+        return section;
         images.forEach((src, i) => {
           const img = document.createElement('img');
           img.src = src;
