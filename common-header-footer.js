@@ -40,10 +40,11 @@ function injectHeaderFooter(headerId, footerId) {
       .abm-navbar-links {
         display: flex;
         flex-wrap: wrap;
-        justify-content: left;
-        gap: 1em;
+        justify-content: center;
+        gap: 2em;
         transition: max-height 0.3s ease;
         background: #001c38 !important;
+        padding: 0 20px;
       }
       .abm-navbar-hamburger {
         display: none !important;
