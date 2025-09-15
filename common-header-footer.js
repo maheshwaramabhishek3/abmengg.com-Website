@@ -86,6 +86,62 @@ function injectHeaderFooter(headerId, footerId) {
       body {
         overflow-x: hidden;
       }
+      /* Contact Popup Styles */
+      #contact-popup {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1100;
+        font-family: Arial, sans-serif;
+      }
+      #popup-minimized {
+        background: #004d99;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: transform 0.3s ease;
+      }
+      #popup-minimized:hover {
+        transform: scale(1.05);
+      }
+      #popup-expanded {
+        display: none;
+        background: white;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+      }
+      .contact-popup-header {
+        background: #004d99;
+        color: white;
+        padding: 15px;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .contact-popup-content {
+        padding: 15px;
+      }
+      .contact-popup-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #333;
+        text-decoration: none;
+        padding: 8px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        transition: background 0.3s;
+      }
+      .contact-popup-link:hover {
+        background: #f0f0f0;
+      }
     </style>
     <div>
       <header class="abm-header" style="position:relative;">
@@ -235,7 +291,7 @@ function injectHeaderFooter(headerId, footerId) {
       <br>
         Reg. No.: UDYAM-TS-09-0106608<br>  
         Email: vishwakarmaabmgroups@gmail.com<br>
-        Phone: +91 8074395382, +91 8121333023<br>
+        Phone: +91 8074395383, +91 8121333023<br>
         <a href="https://wa.me/c/918074395383" target="_blank" style="color: #25D366; text-decoration: underline; font-weight: bold;">View Catalogue</a>
       </p>
   <!-- Removed duplicate visit count div above social icons -->
