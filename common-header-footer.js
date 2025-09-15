@@ -169,12 +169,10 @@ function injectHeaderFooter(headerId, footerId) {
             <option value="ar">Arabic</option>
           </select>
         </div>
-        <div style="display: flex; align-items: center; justify-content: center; gap: 1em; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 0.3em; flex-wrap: wrap; flex-direction: column;">
           <img src="Images/ABMENGG LOGO 092025.jpg" alt="ABM Logo" style="height: 150px; width: 300px; object-fit: cover; object-position: center; clip-path: inset(2% 0); border-radius: 28px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);" />
-          <div style="display: flex; flex-direction: column; justify-content: center;">
-            <h1 style="margin: 0; line-height: 1.0; color: #ffffff; font-size: 3.5em;">ABM</h1>
-            <h2 style="margin: 0; line-height: 1.0; font-size: 1.5em; color: #ffffff;">ENGINEERING GROUP</h2>
-            <p style="margin: 0.2em 0 0 0; line-height: 1.0; font-size: 1.0em; color: #6b9ac0ff; opacity: 0.9; font-family: 'Times New Roman', Times, serif; font-weight: bold;">Since 2021</p>
+          <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; margin-top: -0.3em;">
+            <p style="margin: 0; line-height: 1.0; font-size: 1.0em; color: #6b9ac0ff; opacity: 0.9; font-family: 'Times New Roman', Times, serif; font-weight: bold;">Since 2021</p>
           </div>
         </div>
         <div class="tagline" style="margin-top:0.5em;"><span class="tagline-text">|| Building the Future, Restoring the Past ||</span></div>
