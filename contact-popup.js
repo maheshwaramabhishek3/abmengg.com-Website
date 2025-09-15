@@ -17,7 +17,7 @@ function initContactPopup() {
     popupDiv.innerHTML = `
         <div id="popup-minimized" style="background: linear-gradient(135deg, #004d99 0%, #0066cc 100%); color: white; padding: 12px 28px; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,77,153,0.3), 0 0 20px rgba(0,77,153,0.2); display: flex; align-items: center; gap: 12px; transform-origin: right bottom; animation: pulse 2s infinite; transition: all 0.3s ease;">
             <i class="fas fa-comments" style="font-size: 1.2em; text-shadow: 0 1px 2px rgba(0,0,0,0.2);"></i>
-            <span style="font-weight: 500; letter-spacing: 0.5px; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">Contact Us</span>
+            <span style="font-weight: 500; letter-spacing: 0.5px; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">Contact</span>
         </div>
         <style>
             @keyframes pulse {
