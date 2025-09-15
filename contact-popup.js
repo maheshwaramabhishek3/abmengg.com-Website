@@ -25,17 +25,17 @@ function initContactPopup() {
                 <i class="fas fa-times" style="cursor: pointer;" onclick="toggleContactPopup()"></i>
             </div>
             <div style="padding: 15px;">
-                <a href="tel:+918074395383" style="display: flex; align-items: center; gap: 10px; color: #333; text-decoration: none; padding: 8px; border-radius: 5px; margin-bottom: 10px;">
-                    <i class="fas fa-phone" style="color: #004d99;"></i>
+                <a href="tel:+918074395383" style="display: flex; align-items: center; gap: 10px; color: #333; text-decoration: none; padding: 12px; border-radius: 5px; margin-bottom: 10px; transition: all 0.3s ease;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='transparent'">
+                    <i class="fas fa-phone" style="color: #004d99; font-size: 20px;"></i>
                     <span>+91 8074395383</span>
                 </a>
-                <a href="mailto:vishwakarmaabmgroups@gmail.com" style="display: flex; align-items: center; gap: 10px; color: #333; text-decoration: none; padding: 8px; border-radius: 5px; margin-bottom: 10px;">
-                    <i class="fas fa-envelope" style="color: #004d99;"></i>
-                    <span>Email Us</span>
+                <a href="https://wa.me/918074395383" target="_blank" style="display: flex; align-items: center; gap: 10px; color: #333; text-decoration: none; padding: 12px; border-radius: 5px; margin-bottom: 10px; transition: all 0.3s ease;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='transparent'">
+                    <i class="fab fa-whatsapp" style="color: #25D366; font-size: 20px;"></i>
+                    <span>WhatsApp Chat</span>
                 </a>
-                <a href="https://wa.me/c/918074395383" target="_blank" style="display: flex; align-items: center; gap: 10px; color: #333; text-decoration: none; padding: 8px; border-radius: 5px; margin-bottom: 10px;">
-                    <i class="fab fa-whatsapp" style="color: #25D366;"></i>
-                    <span>WhatsApp</span>
+                <a href="mailto:vishwakarmaabmgroups@gmail.com" style="display: flex; align-items: center; gap: 10px; color: #333; text-decoration: none; padding: 12px; border-radius: 5px; margin-bottom: 10px; transition: all 0.3s ease;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='transparent'">
+                    <i class="fas fa-envelope" style="color: #004d99; font-size: 20px;"></i>
+                    <span>Send Email</span>
                 </a>
                 <a href="contact.html" style="display: block; text-align: center; background: #004d99; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin-top: 10px;">Contact Page</a>
             </div>
