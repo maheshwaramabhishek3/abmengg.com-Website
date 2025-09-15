@@ -5,10 +5,22 @@ function injectHeaderFooter(headerId, footerId) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
       /* Responsive header and navbar styles */
+      .language-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #001c38;
+        padding: 8px 0;
+        text-align: center;
+        z-index: 1001;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
       .abm-header {
         width: 100%;
         background: transparent;
         padding: 1.5em 0 0 0;
+        margin-top: 2em;
         box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       }
       .abm-navbar {
