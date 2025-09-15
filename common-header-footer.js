@@ -107,7 +107,7 @@ function injectHeaderFooter(headerId, footerId) {
         font-family: Arial, sans-serif;
       }
       #popup-minimized {
-        background: #004d99;
+        background: #004d99ff;
         color: white;
         padding: 12px 24px;
         border-radius: 50px;
@@ -162,29 +162,11 @@ function injectHeaderFooter(headerId, footerId) {
           <span id="abm-lang-en" style="font-size:0.85em; color:#fff; background:#1976d2; padding:2px 8px; border-radius:6px; cursor:pointer;">English</span>
           <span id="abm-lang-te" style="font-size:0.85em; color:#fff; background:#1976d2; padding:2px 8px; border-radius:6px; cursor:pointer;">తెలుగు</span>
           <span id="abm-lang-hi" style="font-size:0.85em; color:#fff; background:#1976d2; padding:2px 8px; border-radius:6px; cursor:pointer;">हिन्दी</span>
-          <select id="abm-other-languages" style="font-size:0.85em; padding:2px 8px; border-radius:6px; background:#fff; color:#001c38; border:none; outline:none; margin-left:8px;">
-            <option value="" disabled selected>Other Languages</option>
-            <option value="ta">Tamil</option>
-            <option value="kn">Kannada</option>
-            <option value="mr">Marathi</option>
-            <option value="gu">Gujarati</option>
-            <option value="bn">Bengali</option>
-            <option value="pa">Punjabi</option>
-            <option value="ur">Urdu</option>
-            <option value="ml">Malayalam</option>
-            <option value="or">Odia</option>
-            <option value="as">Assamese</option>
-            <option value="fa">Persian</option>
-            <option value="fr">French</option>
-            <option value="de">German</option>
-            <option value="zh-CN">Chinese (Simplified)</option>
-            <option value="ar">Arabic</option>
-          </select>
         </div>
         <div style="display: flex; align-items: center; justify-content: center; gap: 0.3em; flex-wrap: wrap; flex-direction: column;">
-          <img src="Images/ABMENGG LOGO 092025.jpg" alt="ABM Logo" style="height: 150px; width: 300px; object-fit: cover; object-position: center; clip-path: inset(2% 0); border-radius: 28px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);" />
+          <img src="Images/ABMENGG LOGO 092025.jpg" alt="ABM Logo" style="height: 150px; width: 300px; object-fit: cover; object-position: center; clip-path: inset(2% 0); border-radius: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);" />
           <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; margin-top: -0.3em;">
-            <p style="margin: 0; line-height: 1.0; font-size: 1.0em; color: #6b9ac0ff; opacity: 0.9; font-family: 'Times New Roman', Times, serif; font-weight: bold;">Since 2021</p>
+            <p style="margin: 0; line-height: 1.0; font-size: 1.1em; color: #e0e0e0ff; opacity: 0.9; font-family: 'Times New Roman', Times, serif; font-weight: bold;">Since 2021</p>
           </div>
         </div>
         <div class="tagline" style="margin-top:0.5em;"><span class="tagline-text">|| Building the Future, Restoring the Past ||</span></div>
