@@ -52,6 +52,56 @@
     .milestone:nth-child(even)::before {
       left: -2.5em;
     }
+
+    /* Responsive styles for mobile */
+    @media screen and (max-width: 768px) {
+      .timeline::before {
+        left: 2em;
+      }
+      .milestone {
+        width: calc(100% - 4em);
+        margin-left: 4em;
+      }
+      .milestone:nth-child(odd),
+      .milestone:nth-child(even) {
+        left: 0;
+      }
+      .milestone::before {
+        left: -2.5em;
+      }
+      .milestone:nth-child(odd)::before {
+        right: auto;
+        left: -2.5em;
+      }
+      .milestone > div {
+        min-width: 250px;
+      }
+    }
+
+    /* Additional mobile optimizations */
+    @media screen and (max-width: 480px) {
+      .timeline {
+        padding: 1em 0;
+      }
+      .milestone {
+        margin: 1.5em 0;
+      }
+      .milestone > div {
+        padding: 1.5em 1em !important;
+      }
+      .milestone h3 {
+        font-size: 1.5em !important;
+      }
+      .milestone p {
+        font-size: 1em !important;
+      }
+      .milestone ul {
+        padding-left: 1em !important;
+      }
+      .content {
+        padding: 1em !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -180,7 +230,8 @@
               <ul style="margin:0.5em 0 0 0; padding-left:1.2em; color:#b2e5c7; text-align:left;">
               <li>Performed structural marking works at <br> > Pennar Industries Limited (PEBS Unit) Manufacturing Facility, Sadashivpet. <br> > DRDO's Research Center Imarat (APJ RCI), Hyderabad.</li>              
               <li>Deflection Observation For Load Test for  <br> > BHEL Bridge, Hyderabad, Telangana. <br> > Telangana's 1st Longest Bowstring Girder Mancheriyal.  </li>
-              <li>Building Surveys and Net Area Calculations for Road Affected Buildings and Lands </li>  
+              <li>Building Surveys and Net Area Calculations for Road Affected Buildings and Lands </li>
+              <li>Performed First Ever Digital Topographic Survey of the Hyderabads' Iconic BIRLA MANDIR. </li>  
             </ul>
           </div>
       </div>
