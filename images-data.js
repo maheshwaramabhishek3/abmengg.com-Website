@@ -1,4 +1,4 @@
-// Common image arrays for ABM Engineering Group
+// Common image arrays for Vishwakarma ABM Engineering Group
 // Use in both index.html and gallery.html
 
 const abmcImages = [

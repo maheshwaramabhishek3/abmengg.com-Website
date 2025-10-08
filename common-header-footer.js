@@ -278,7 +278,7 @@ function injectHeaderFooter(headerId, footerId) {
   // Footer HTML (copied exactly from index.html)
   const footerHTML = `
     <footer class="about" style="margin-top:3em; width:100vw; margin-left:calc(-50vw + 50%); margin-right:calc(-50vw + 50%); background:#000000; padding:2em 0; border-radius:0; box-shadow:0 2px 8px rgba(0,0,0,0.07); color:#948787;">
-      <h3 style="margin-bottom: 0.3em;">ABM Engineering Group</h3>
+      <h3 style="margin-bottom: 0.3em;">Vishwakarma ABM Engineering Group</h3>
             <p style="margin-top: 0.0em;">
       <br>
         Reg. No.: UDYAM-TS-09-0106608<br>  

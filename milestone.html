@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Milestones - ABM ENGINEERING GROUP</title>
+  <title>Milestones - Vishwakarma ABM Engineering Group</title>
   <link rel="icon" type="image/jpeg" href="Images/ABMENGG LOGO 092025.jpg" />
   <script src="images-data.js"></script>
   <script src="common-header-footer.js"></script>
@@ -97,6 +97,43 @@
       }
     }
 
+    /* Current year highlight */
+    @keyframes currentYearPulse {
+      0% {
+        box-shadow: 0 0 20px rgba(255,255,255,0.3),
+                    0 0 30px rgba(0,77,153,0.3),
+                    inset 0 0 15px rgba(255,255,255,0.1);
+        border-color: rgba(255,255,255,0.6);
+      }
+      50% {
+        box-shadow: 0 0 25px rgba(255,255,255,0.5),
+                    0 0 40px rgba(0,77,153,0.5),
+                    inset 0 0 20px rgba(255,255,255,0.2);
+        border-color: rgba(255,255,255,0.8);
+      }
+      100% {
+        box-shadow: 0 0 20px rgba(255,255,255,0.3),
+                    0 0 30px rgba(0,77,153,0.3),
+                    inset 0 0 15px rgba(255,255,255,0.1);
+        border-color: rgba(255,255,255,0.6);
+      }
+    }
+
+    .milestone:last-child > div {
+      background: linear-gradient(135deg, rgba(0,28,56,0.9), rgba(0,77,153,0.7)) !important;
+      border: 2px solid rgba(255,255,255,0.6);
+      animation: currentYearPulse 3s infinite;
+    }
+
+    .milestone:last-child:hover > div {
+      transform: translateY(-10px);
+      background: linear-gradient(135deg, rgba(0,38,76,0.95), rgba(0,87,173,0.8)) !important;
+      border: 2px solid rgba(255,255,255,0.9);
+      box-shadow: 0 10px 30px rgba(255,255,255,0.3),
+                  0 0 50px rgba(0,77,153,0.5),
+                  inset 0 0 25px rgba(255,255,255,0.2) !important;
+    }
+
     /* Additional mobile optimizations */
     @media screen and (max-width: 480px) {
       .timeline {
@@ -138,7 +175,7 @@
             <span style="background: linear-gradient(45deg, #ffffff, #e0e0e0); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; text-shadow: 2px 2px 4px rgba(0,0,0,0.4), -1px -1px 0 rgba(255,255,255,0.2);">2021</span>
           </h3>
           <div style="width: 100%; height: 3px; background: linear-gradient(to right, rgba(255,255,255,0.8) 40%, rgba(255,255,255,0.2) 100%); margin: 0 0 1em 0;"></div>
-          <p style="color: #efeaea; font-size:1.1em; margin-bottom:1em; font-weight:bold;">Founded ABM Engineering Group</p>
+          <p style="color: #efeaea; font-size:1.1em; margin-bottom:1em; font-weight:bold;">Founded Vishwakarma ABM Engineering Group</p>
           <div style="color:#cccccc; font-size:1em; margin-bottom:0.7em;">
             <span style="color:#25D366; font-weight:bold;">Achievements:</span>
               <ul style="margin:0.5em 0 0 0; padding-left:1.2em; color:#b2e5c7; text-align:left;">
