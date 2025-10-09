@@ -10,8 +10,8 @@
   <script src="common-header-footer.js"></script>
   <link rel="stylesheet" href="common-styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="contact-popup.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -61,6 +61,33 @@
         text-align: center;
       }
 
+      .founder-text > div {
+        transition: all 0.3s ease-in-out;
+      }
+
+      .founder-text > div:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      }
+
+      .founder-text span[style*="90CAF9"] {
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .founder-text span[style*="90CAF9"]:hover {
+        transform: scale(1.05);
+        text-shadow: 0 0 15px rgba(144,202,249,0.5);
+      }
+
+      .founder-text p {
+        transition: all 0.3s ease;
+      }
+
+      .founder-text p:hover {
+        transform: translateX(10px);
+      }
+
       @media (max-width: 800px) {
         .founder-flex {
           flex-direction: column;
@@ -85,14 +112,32 @@
           <img src="Images/ABM Founder.jpg" alt="Abhishek Maheshwaram - Founder" class="founder-img">
         </div>
         <div class="founder-text">
-          <div style="margin-bottom: 2em;">
-            <h3 style="color: #ffffff; margin-bottom: 1em;">Founder's Note</h3>
-            <p style="line-height: 1.6;">
-              I'm Abhishek Maheshwaram, a structural engineering graduate with hands-on experience in civil design, land
-              surveying, and legal compliance. Vishwakarma ABM Engineering Group was born from my passion for merging technical
-              precision with practical, on-ground solutions. My goal is to provide reliable, transparent, and
-              technology-driven services that meet the real needs of clients.
-            </p>
+          <div style="margin-bottom: 1.5em; padding: 1.2em; background: rgba(255, 255, 255, 0.03); border-radius: 10px; position: relative; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <h3 style="color: #ffffff; margin-bottom: 0.8em; font-family: Arial, sans-serif; font-size: 1.8em; text-align: left; font-weight: 600; letter-spacing: 0.5px; border-bottom: 2px solid rgba(255,255,255,0.2); padding-bottom: 0.3em;">
+              Founder's Note
+            </h3>
+            <div style="position: relative; padding: 1.2em; background: rgba(0, 28, 56, 0.3); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);">
+              <!-- Decorative corner elements -->
+              <div style="position: absolute; top: -3px; left: -3px; width: 12px; height: 12px; border-top: 1px solid rgba(255,255,255,0.3); border-left: 1px solid rgba(255,255,255,0.3);"></div>
+              <div style="position: absolute; top: -3px; right: -3px; width: 12px; height: 12px; border-top: 1px solid rgba(255,255,255,0.3); border-right: 1px solid rgba(255,255,255,0.3);"></div>
+              <div style="position: absolute; bottom: -3px; left: -3px; width: 12px; height: 12px; border-bottom: 1px solid rgba(255,255,255,0.3); border-left: 1px solid rgba(255,255,255,0.3);"></div>
+              <div style="position: absolute; bottom: -3px; right: -3px; width: 12px; height: 12px; border-bottom: 1px solid rgba(255,255,255,0.3); border-right: 1px solid rgba(255,255,255,0.3);"></div>
+              
+              <p style="font-family: 'Caveat', cursive; font-size: 1.3em; line-height: 1.4; color: #e0e0e0; text-align: left; margin-bottom: 1em; font-weight: 500;">
+                Dear Visitors,<br>
+                I'm <span style="color: #90CAF9; font-weight: 600;">Abhishek Maheshwaram</span>, a structural engineering graduate with hands-on experience in civil design, land
+                surveying, and legal compliance. <span style="color: #90CAF9;">Vishwakarma ABM Engineering Group</span> was born from my passion for merging technical
+                precision with practical, on-ground solutions.
+              </p>
+              <p style="font-family: 'Caveat', cursive; font-size: 1.3em; line-height: 1.4; color: #e0e0e0; text-align: left; font-weight: 500;">
+                My goal is to provide reliable, transparent, and technology-driven services that meet the real needs of clients.
+              </p>
+              <div style="text-align: right; margin-top: 1em;">
+                <span style="font-family: 'Dancing Script', cursive; font-size: 1.4em; color: #90CAF9; font-weight: 600;">
+                  - Abhishek Maheshwaram
+                </span>
+              </div>
+            </div>
           </div>
           <!-- Connect With Me Section -->
           <div>
