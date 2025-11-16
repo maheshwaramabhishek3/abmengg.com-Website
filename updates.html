@@ -14,20 +14,26 @@
   <style>
     .updates-grid {
       margin-top: 0.6em;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.5em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
       width: 100%;
       box-sizing: border-box;
+      justify-content: center;
     }
     .update-card {
       background: rgba(255,255,255,0.03);
-      padding: 0.2em;
-      border-radius: 6px;
-      width: 100%;
-      max-width: 320px;
-      margin: 0 auto;
+      padding: 0.5em;
+      border-radius: 8px;
+      width: calc(20% - 1em);
+      max-width: 250px;
+      min-width: 200px;
       box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .update-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 150, 255, 0.2);
     }
     .update-title {
       font-weight: 700;
@@ -44,18 +50,19 @@
       background: #FFF !important;
       border: 0 !important;
       margin: 0 auto !important;
-      max-width: 320px !important;
-      min-width: 320px !important;
+      max-width: 250px !important;
+      min-width: 200px !important;
       width: 100% !important;
     }
     @media (max-width: 768px) {
       .updates-grid {
-        grid-template-columns: 1fr;
-        gap: 1em;
+        flex-direction: column;
+        align-items: center;
       }
       .update-card {
+        width: 100%;
         max-width: 400px;
-        margin: 0 auto;
+        min-width: unset;
       }
       .instagram-media {
         max-width: 100% !important;
@@ -63,15 +70,23 @@
       }
     }
     @media (min-width: 769px) and (max-width: 1024px) {
-      .updates-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
       .update-card {
-        max-width: 280px;
+        width: calc(33.333% - 1em);
+        max-width: 250px;
       }
       .instagram-media {
-        max-width: 280px !important;
-        min-width: 280px !important;
+        max-width: 250px !important;
+        min-width: 200px !important;
+      }
+    }
+    @media (min-width: 1025px) and (max-width: 1400px) {
+      .update-card {
+        width: calc(25% - 1em);
+        max-width: 250px;
+      }
+      .instagram-media {
+        max-width: 250px !important;
+        min-width: 200px !important;
       }
     }
   </style>
@@ -79,7 +94,7 @@
 
 <body>
   <div id="header-placeholder"></div>
-  <main class="content" style="max-width: 1100px; margin: 2em auto; color: #fff; padding: 0 1em;">
+  <main class="content" style="max-width: 100%; margin: 2em auto; color: #fff; padding: 0 2em;">
     <h2 style="text-align:center; margin-bottom:1em;">Latest Updates</h2>
     <section style="background: rgba(0,28,56,0.5); padding:1.5em; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
       <p style="line-height:1.6;">Welcome to our Updates page. We will post company news, project highlights, and announcements here.</p>
