@@ -11,236 +11,287 @@
   <link rel="stylesheet" href="common-styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="contact-popup.js"></script>
+  <style>
+    .updates-grid {
+      margin-top: 0.6em;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5em;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .update-card {
+      background: rgba(255,255,255,0.03);
+      padding: 0.3em;
+      border-radius: 6px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .update-title {
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 0.7em;
+      margin-bottom: 0.3em;
+      text-align: left;
+    }
+    .instagram-container {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .instagram-media {
+      background: #FFF !important;
+      border: 0 !important;
+      margin: 0 auto !important;
+      max-width: 100% !important;
+      min-width: 100% !important;
+      width: 100% !important;
+    }
+    @media (max-width: 768px) {
+      .updates-grid {
+        grid-template-columns: 1fr;
+        gap: 1em;
+      }
+      .update-card {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .updates-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
 </head>
 
 <body>
   <div id="header-placeholder"></div>
-  <main class="content" style="max-width: 1100px; margin: 2em auto; color: #fff;">
+  <main class="content" style="max-width: 1100px; margin: 2em auto; color: #fff; padding: 0 1em;">
     <h2 style="text-align:center; margin-bottom:1em;">Latest Updates</h2>
     <section style="background: rgba(0,28,56,0.5); padding:1.5em; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
       <p style="line-height:1.6;">Welcome to our Updates page. We will post company news, project highlights, and announcements here.</p>
-      <div style="margin-top:0.6em; display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:1.5em; justify-items:center;">
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">October 18, 2025 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DP78KwoEn_s/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+      <div class="updates-grid">
+        <article class="update-card">
+          <div class="update-title">October 18, 2025 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DP78KwoEn_s/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">October 7, 2025 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPgl15qkrMw/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">October 7, 2025 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPgl15qkrMw/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">August 31, 2025 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DMT9N42vYoA/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">August 31, 2025 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DMT9N42vYoA/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">August 29, 2025 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DN7WylODN16/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">August 29, 2025 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DN7WylODN16/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">August 26, 2025 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DNz2kR-QGaz/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">August 26, 2025 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DNz2kR-QGaz/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">August 19, 2025 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DNinxIFRFWB/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">August 19, 2025 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DNinxIFRFWB/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">July 20, 2025 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C_VQnAjS2Kv/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">July 20, 2025 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C_VQnAjS2Kv/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">June 19, 2025 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLEdPMqvqu7/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">June 19, 2025 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLEdPMqvqu7/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">May 17, 2025 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJvmjvOxD0j/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">May 17, 2025 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJvmjvOxD0j/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">May 15, 2025 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJqR0bMR-2T/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">May 15, 2025 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJqR0bMR-2T/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">May 1, 2025 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJF-AruqDle/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">May 1, 2025 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJF-AruqDle/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">April 5, 2025 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DIDE-_NKPEL/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">April 5, 2025 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DIDE-_NKPEL/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">April 3, 2025 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DH-KLhLvXqu/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">April 3, 2025 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DH-KLhLvXqu/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">February 20, 2025 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DGRsnj6yZee/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">February 20, 2025 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DGRsnj6yZee/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">November 9, 2024 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCI1FA9v6_G/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">November 9, 2024 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCI1FA9v6_G/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">October 11, 2024 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DA-R3dHyJUe/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">October 11, 2024 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DA-R3dHyJUe/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">August 10, 2024 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C-eOWbDvfo9/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">August 10, 2024 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C-eOWbDvfo9/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">June 3, 2024 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C7vaLGWP3BT/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">June 3, 2024 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C7vaLGWP3BT/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">May 13, 2024 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C65KX-yxSox/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">May 13, 2024 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C65KX-yxSox/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">May 9, 2024 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C6vf4L_vNqr/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">May 9, 2024 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C6vf4L_vNqr/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">April 27, 2024 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C6QGEZuPVtc/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">April 27, 2024 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C6QGEZuPVtc/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">March 20, 2024 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C4u45ImPyLq/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">March 20, 2024 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C4u45ImPyLq/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">February 10, 2024 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C3JyKlqv8r_/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">February 10, 2024 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C3JyKlqv8r_/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">November 20, 2023 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cz3SR6sPnFx/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">November 20, 2023 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cz3SR6sPnFx/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">March 29, 2023 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CqXJt7_Ikt6/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">March 29, 2023 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CqXJt7_Ikt6/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">October 9, 2022 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CjevGU3OGCz/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">October 9, 2022 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CjevGU3OGCz/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">July 30, 2022 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cgo3Mphh_1M/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">July 30, 2022 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cgo3Mphh_1M/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">July 30, 2022 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CgozTXMh0BL/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">July 30, 2022 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CgozTXMh0BL/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">July 30, 2022 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cgo2clTBhXx/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">July 30, 2022 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cgo2clTBhXx/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">February 28, 2022 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CagqmFNvEKL/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">February 28, 2022 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CagqmFNvEKL/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">January 18, 2022 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CY3VElhrZsO/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">January 18, 2022 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CY3VElhrZsO/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
 
-        <article style="background: rgba(255,255,255,0.03); padding:0.4em; border-radius:8px; max-width:320px; width:100%; box-sizing:border-box;">
-          <div style="font-weight:700; color:#ffffff; font-size:0.95em; margin-bottom:0.4em; text-align:left;">December 23, 2021 — Instagram</div>
-          <div style="max-width:320px; margin:0 auto;">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CX0eM-cpWTv/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+        <article class="update-card">
+          <div class="update-title">December 23, 2021 — Instagram</div>
+          <div class="instagram-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CX0eM-cpWTv/" data-instgrm-version="14"></blockquote>
           </div>
         </article>
       <script async defer src="https://www.instagram.com/embed.js"></script>
@@ -255,3 +306,4 @@
 </body>
 
 </html>
+
