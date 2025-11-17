@@ -32,6 +32,25 @@ function injectHeaderFooter(headerId, footerId) {
           width: 100%;
           overflow-x: auto;
       }
+      .abm-navbar a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 0.5em 1em;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+      .abm-navbar a i {
+        color: #4fc3f7;
+        margin-right: 6px;
+        transition: color 0.3s ease;
+      }
+      .abm-navbar a:hover i {
+        color: #81d4fa;
+      }
+      .abm-navbar a.active i {
+        color: #29b6f6;
+      }
       @media (min-width: 701px) {
           .abm-navbar {
             background: #001c38 !important;
@@ -177,13 +196,13 @@ function injectHeaderFooter(headerId, footerId) {
   <!-- Removed abm-navbar-current-page span to eliminate black 'Home' text above navbar -->
   <!-- Quick navigation buttons removed as requested -->
       <div class="abm-navbar-links">
-        <a href="index.html" id="nav-home" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Home</a>
-        <a href="about.html" id="nav-about" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">About Us</a>
-        <a href="services.html" id="nav-services" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Services</a>
-        <a href="milestone.html" id="nav-milestone" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Milestones</a>
-        <a href="gallery.html" id="nav-gallery" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Gallery</a>
-        <a href="updates.html" id="nav-updates" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Updates</a>
-        <a href="contact.html" id="nav-contact" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'">Contact</a>
+        <a href="index.html" id="nav-home" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-home"></i> Home</a>
+        <a href="about.html" id="nav-about" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-info-circle"></i> About Us</a>
+        <a href="services.html" id="nav-services" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-hard-hat"></i> Services</a>
+        <a href="milestone.html" id="nav-milestone" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-flag-checkered"></i> Milestones</a>
+        <a href="gallery.html" id="nav-gallery" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-images"></i> Gallery</a>
+        <a href="updates.html" id="nav-updates" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-bullhorn"></i> Updates</a>
+        <a href="contact.html" id="nav-contact" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-envelope"></i> Contact</a>
       </div>
     </nav>
     </div>
