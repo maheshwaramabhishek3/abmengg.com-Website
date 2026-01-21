@@ -202,6 +202,7 @@ function injectHeaderFooter(headerId, footerId) {
         <a href="milestone.html" id="nav-milestone" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-flag-checkered"></i> Milestones</a>
         <a href="gallery.html" id="nav-gallery" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-images"></i> Gallery</a>
         <a href="updates.html" id="nav-updates" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-bullhorn"></i> Updates</a>
+        <a href="career.html" id="nav-career" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-briefcase"></i> Career</a>
         <a href="contact.html" id="nav-contact" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-envelope"></i> Contact</a>
       </div>
     </nav>
@@ -237,6 +238,7 @@ function injectHeaderFooter(headerId, footerId) {
         'projects.html': 'Project Works',
         'updates.html': 'Updates',
         'milestone.html': 'Milestone',
+        'career.html': 'Career',
         'contact.html': 'Contact Us'
       };
       var label = pageMap[currentPage] || '';
