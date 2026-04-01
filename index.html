@@ -30,7 +30,8 @@
 </head>
 <body>
   <div id="header-placeholder"></div>
-    <div class="section" style="background:rgba(0,28,56,0.5); color:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.15); border-radius:8px;">
+
+  <div class="section" style="background:rgba(0,28,56,0.5); color:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.15); border-radius:8px;">
       <div style="text-align:center; margin-bottom:2em;">
         <img src="Images/new logo 2025 png.png" alt="Vishwakarma ABM Engineering Group Logo" style="height: 200px; margin-bottom:1em; filter: drop-shadow(0 0 15px rgba(255,255,255,0.7)) drop-shadow(0 0 30px rgba(255,255,255,0.5));">
         <h1 style="font-size:2.5em; margin-bottom:0.2em; color:#fff;">Welcome to Vishwakarma ABM Engineering Group</h1>
@@ -96,6 +97,333 @@
           }
         }
       </style>
+
+      <!-- HERO CAROUSEL SECTION -->
+      <style>
+        .hero-carousel {
+          position: relative;
+          width: 100%;
+          max-width: 100%;
+          height: 500px;
+          overflow: hidden;
+          background: rgba(0, 28, 56, 0.8);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 2em;
+        }
+
+        .carousel-container {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+
+        .carousel-slide {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: opacity 0.8s ease-in-out;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .carousel-slide.active {
+          opacity: 1;
+        }
+
+        .carousel-slide img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          background: transparent;
+        }
+
+        .carousel-overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+          padding: 3em 2em 2em;
+          color: #fff;
+          z-index: 2;
+          display: none;
+        }
+
+        .carousel-text h2 {
+          margin: 0;
+          font-size: 2em;
+          margin-bottom: 0.5em;
+          color: #1976d2;
+        }
+
+        .carousel-text p {
+          margin: 0;
+          font-size: 1.1em;
+          color: #e0e0e0;
+        }
+
+        .carousel-controls {
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 1em;
+          z-index: 3;
+        }
+
+        .carousel-btn {
+          background: rgba(255,255,255,0.3);
+          color: #fff;
+          border: 2px solid #fff;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          cursor: pointer;
+          font-size: 1.5em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+        }
+
+        .carousel-btn:hover {
+          background: rgba(25,118,210,0.8);
+          border-color: #1976d2;
+        }
+
+        .carousel-dots {
+          position: absolute;
+          bottom: 100px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 0.8em;
+          z-index: 3;
+        }
+
+        .dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background: rgba(255,255,255,0.5);
+          cursor: pointer;
+          transition: all 0.3s ease;
+          border: 2px solid transparent;
+        }
+
+        .dot.active {
+          background: #1976d2;
+          width: 30px;
+          border-radius: 6px;
+        }
+
+        @media (max-width: 768px) {
+          .hero-carousel {
+            height: 350px;
+          }
+
+          .carousel-overlay {
+            padding: 2em 1.5em 1.5em;
+          }
+
+          .carousel-text h2 {
+            font-size: 1.5em;
+          }
+
+          .carousel-text p {
+            font-size: 0.95em;
+          }
+
+          .carousel-btn {
+            width: 40px;
+            height: 40px;
+            font-size: 1.2em;
+          }
+
+          .carousel-dots {
+            bottom: 70px;
+            gap: 0.6em;
+          }
+
+          .dot {
+            width: 10px;
+            height: 10px;
+          }
+
+          .dot.active {
+            width: 24px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .hero-carousel {
+            height: 280px;
+          }
+
+          .carousel-text h2 {
+            font-size: 1.2em;
+          }
+
+          .carousel-text p {
+            font-size: 0.9em;
+          }
+
+          .carousel-btn {
+            width: 36px;
+            height: 36px;
+            font-size: 1em;
+          }
+        }
+      </style>
+
+      <div class="hero-carousel">
+        <div class="carousel-container" id="heroCarousel">
+          <!-- Slides will be populated by JavaScript -->
+        </div>
+        
+        <div class="carousel-dots" id="carouselDots"></div>
+        
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prevBtn" onclick="prevHeroSlide()">&#10094;</button>
+          <button class="carousel-btn" id="nextBtn" onclick="nextHeroSlide()">&#10095;</button>
+        </div>
+      </div>
+
+      <script>
+        // Shuffle function (Fisher-Yates algorithm)
+        function shuffleArray(arr) {
+          for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+          }
+          return arr;
+        }
+
+        // Combine all images for the hero carousel
+        const heroImages = [];
+        const imageCaptions = [];
+        
+        // Add images from all categories
+        if (typeof abmcImages !== 'undefined' && abmcImages.length > 0) {
+          heroImages.push(...abmcImages.slice(0, 8));
+          for (let i = 0; i < Math.min(8, abmcImages.length); i++) {
+            imageCaptions.push('ABMC Projects');
+          }
+        }
+        if (typeof abmsImages !== 'undefined' && abmsImages.length > 0) {
+          heroImages.push(...abmsImages.slice(0, 8));
+          for (let i = 0; i < Math.min(8, abmsImages.length); i++) {
+            imageCaptions.push('ABMS Projects');
+          }
+        }
+        if (typeof elevationImages !== 'undefined' && elevationImages.length > 0) {
+          heroImages.push(...elevationImages.slice(0, 5));
+          for (let i = 0; i < Math.min(5, elevationImages.length); i++) {
+            imageCaptions.push('3D Elevation Design');
+          }
+        }
+        if (typeof structuralImages !== 'undefined' && structuralImages.length > 0) {
+          heroImages.push(...structuralImages.slice(0, 5));
+          for (let i = 0; i < Math.min(5, structuralImages.length); i++) {
+            imageCaptions.push('Structural Design');
+          }
+        }
+
+        // Shuffle images and captions together
+        shuffleArray(heroImages);
+        shuffleArray(imageCaptions);
+
+        let currentHeroSlide = 0;
+        let autoScrollHero;
+
+        function initHeroCarousel() {
+          if (heroImages.length === 0) return;
+
+          const carousel = document.getElementById('heroCarousel');
+          const dotsContainer = document.getElementById('carouselDots');
+
+          // Create slides
+          heroImages.forEach((img, idx) => {
+            const slide = document.createElement('div');
+            slide.className = 'carousel-slide' + (idx === 0 ? ' active' : '');
+            slide.innerHTML = `
+              <img src="${img}" alt="Project ${idx + 1}">
+              <div class="carousel-overlay">
+                <div class="carousel-text">
+                  <h2>Vishwakarma ABM Engineering</h2>
+                  <p>${imageCaptions[idx] || 'Exceptional Projects'}</p>
+                </div>
+              </div>
+            `;
+            carousel.appendChild(slide);
+          });
+
+          // Create dots
+          heroImages.forEach((_, idx) => {
+            const dot = document.createElement('div');
+            dot.className = 'dot' + (idx === 0 ? ' active' : '');
+            dot.onclick = () => showHeroSlide(idx);
+            dotsContainer.appendChild(dot);
+          });
+
+          startAutoScroll();
+        }
+
+        function showHeroSlide(n) {
+          const slides = document.querySelectorAll('.carousel-slide');
+          const dots = document.querySelectorAll('.dot');
+
+          if (n >= slides.length) currentHeroSlide = 0;
+          if (n < 0) currentHeroSlide = slides.length - 1;
+
+          slides.forEach(slide => slide.classList.remove('active'));
+          dots.forEach(dot => dot.classList.remove('active'));
+
+          slides[currentHeroSlide].classList.add('active');
+          dots[currentHeroSlide].classList.add('active');
+        }
+
+        function nextHeroSlide() {
+          currentHeroSlide++;
+          if (currentHeroSlide >= document.querySelectorAll('.carousel-slide').length) {
+            currentHeroSlide = 0;
+          }
+          showHeroSlide(currentHeroSlide);
+          clearInterval(autoScrollHero);
+          startAutoScroll();
+        }
+
+        function prevHeroSlide() {
+          currentHeroSlide--;
+          if (currentHeroSlide < 0) {
+            currentHeroSlide = document.querySelectorAll('.carousel-slide').length - 1;
+          }
+          showHeroSlide(currentHeroSlide);
+          clearInterval(autoScrollHero);
+          startAutoScroll();
+        }
+
+        function startAutoScroll() {
+          autoScrollHero = setInterval(() => {
+            currentHeroSlide++;
+            if (currentHeroSlide >= document.querySelectorAll('.carousel-slide').length) {
+              currentHeroSlide = 0;
+            }
+            showHeroSlide(currentHeroSlide);
+          }, 5000);
+        }
+
+        window.addEventListener('DOMContentLoaded', initHeroCarousel);
+      </script>
+
       <!-- Slideshow Sections -->
       <div style="background:rgba(34,34,34,0.7); border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15); margin:2em 2em 2em 2em; padding:2em 1em; color:#fff;">
         <div style="text-align:center; margin-bottom:1em;">
