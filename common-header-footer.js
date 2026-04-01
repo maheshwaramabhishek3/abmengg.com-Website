@@ -201,7 +201,7 @@ function injectHeaderFooter(headerId, footerId) {
         <a href="services.html" id="nav-services" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-hard-hat"></i> Services</a>
         <a href="milestone.html" id="nav-milestone" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-flag-checkered"></i> Milestones</a>
         <a href="gallery.html" id="nav-gallery" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-images"></i> Gallery</a>
-        <a href="updates.html" id="nav-updates" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-bullhorn"></i> Updates</a>
+        <a href="updates.html" id="nav-updates" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-bullhorn"></i> Updates / News</a>
         <a href="career.html" id="nav-career" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-briefcase"></i> Career</a>
         <a href="contact.html" id="nav-contact" style="color: #fff; text-decoration: none; font-weight: bold; padding: 0.5em 1em; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'" onmouseout="this.style.backgroundColor=this.classList.contains('active') ? '#004d99' : 'transparent'"><i class="fas fa-envelope"></i> Contact</a>
       </div>
@@ -236,7 +236,7 @@ function injectHeaderFooter(headerId, footerId) {
         'services.html': 'Services',
         'gallery.html': 'Gallery',
         'projects.html': 'Project Works',
-        'updates.html': 'Updates',
+        'updates.html': 'Updates / News',
         'milestone.html': 'Milestone',
         'career.html': 'Career',
         'contact.html': 'Contact Us'
